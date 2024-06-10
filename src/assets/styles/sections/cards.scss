@@ -1,0 +1,83 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+}
+
+.card {
+  &__art {
+    position: relative;
+    background-color: #F1F3F4;
+    padding-top: 63%;
+    background-position: center right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 .3rem .8rem;
+    &-wrap {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding-left: 2.3rem;
+      padding-bottom: 3rem;
+    }
+    &-leaf {
+      width: 5.5rem;
+      height: 5.5rem;
+      display: inline-block;
+      background-image: url('./images/svg/icon-leaf.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &-caption {
+      display: flex;
+      font-size: 3.6rem;
+      font-weight: $bold;
+      font-family: $secondFont;
+      line-height: .9;
+      white-space: pre-line;
+      margin-bottom: .5rem;
+    }
+    &-description {
+      font-size: 1.2rem;
+      max-width: 16rem;
+    }
+  }
+  &__info {
+    margin-top: 2.5rem;
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      font-size: 2.6rem;
+      font-family: $secondFont;
+      font-weight: $bold;
+      line-height: .9;
+      margin-bottom: 1rem;
+      span {
+        margin-top: .6rem;
+        color: #BDBDBD;
+        font-size: 1.2rem;
+        font-weight: $normal;
+        font-family: $baseFont;
+      }
+    }
+    &-text {
+      font-size: 1.4rem;
+      line-height: 1.3;
+      font-weight: normal;
+      white-space: pre-line;
+    }
+    .btn {
+      display: inline-flex;
+      margin-top: 3rem;
+      padding: 0 4rem;
+    }
+  }
+  &_color {
+    &_white {
+      .card__art-caption {
+        color: $color-white;
+      }
+    }
+  }
+}

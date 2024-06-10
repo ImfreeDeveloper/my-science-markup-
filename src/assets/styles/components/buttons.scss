@@ -27,7 +27,8 @@
     color: $color-text;
     background-color: $color-primary;
     &:hover {
-      background-color: darken($color-primary, 5%);
+      color: $color-white;
+      background-color: $color-green;
     }
   }
   &-black {

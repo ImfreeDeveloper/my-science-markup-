@@ -6,10 +6,10 @@ $break_xs: 576px;
 $break_xxs: 480px;
 
 $offset: 30px;
-$offset_md: 15px;
-$offset_sm: 15px;
-$offset_xs: 15px;
-$offset_xxs: 15px;
+$offset_md: 30px;
+$offset_sm: 30px;
+$offset_xs: 25px;
+$offset_xxs: 25px;
 
 @mixin width-with-offset() {
   width: calc(100% - $offset * 2);

@@ -1,7 +1,23 @@
 {% extends "layouts::main.twig" %}
-{% from "@includes/macro.twig" import modal %}
+{% from "@includes/macro.twig" import modal, card %}
 
 {% block content %}
+  <section class="sec sec-ad">
+    <div class="container">
+      <div class="cards">
+        {% for item in DATA_CARDS_AD %}
+          {{ card(
+            item.caption,
+            item.description,
+            item.title,
+            item.text,
+            item.img,
+            item.class
+          ) }}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 
 {#  {{ modal() }}#}
 {% endblock %}

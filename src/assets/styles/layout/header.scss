@@ -107,9 +107,10 @@
   &__btn {
     @include to(900px) {
       grid-column: 5 / -1;
-    }
-    .btn {
-      height: 4rem;
+      .btn {
+        height: 4rem;
+      }
+
     }
 
     @include xs-block() {
@@ -138,6 +139,10 @@
 
       @include to(1200px) {
         font-size: 1.6rem;
+      }
+
+      @include xxs-block() {
+        font-size: 1.4rem;
       }
     }
 

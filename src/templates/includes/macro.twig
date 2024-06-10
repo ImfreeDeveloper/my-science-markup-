@@ -54,6 +54,25 @@
 	</div>
 {% endmacro %}
 
+
+{% macro card(caption, description, title, text, img, className='') %}
+	<div class="card {{ className }}">
+		<div class="card__art" style="background-image: url('./images/{{ img }}');">
+			<div class="card__art-wrap">
+				<span class="card__art-leaf"></span>
+				<p class="card__art-caption">{{ caption }}</p>
+				<p class="card__art-description">{{ description }}</p>
+			</div>
+		</div>
+{#		{% if users|length > 0 %} {% endif %}#}
+		<div class="card__info">
+			<p class="card__info-title">{{ title }} <span>реклама</span></p>
+			<p class="card__info-text">{{ text }}</p>
+			<a href="#" class="btn btn-light-green">подробнее</a>
+		</div>
+	</div>
+{% endmacro %}
+
 {#{% macro form_input(name, value='', title=name, type='text') %}#}
 {#<div class="form-group">#}
 {#	<label class="form-label" for="{{ name }}_id">{{ title }}</label>#}
