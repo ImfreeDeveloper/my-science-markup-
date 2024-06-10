@@ -1,0 +1,93 @@
+{% from "@includes/macro.twig" import svg, img %}
+
+<header class="header">
+  <div class="container">
+    <div class="header-grid">
+      <div class="header__logo">
+        <a href="/">
+          {{ svg('id-svg-logo', 'svg-logo-header') }}
+          {{ img('svg/icon-leaf.svg') }}
+        </a>
+      </div>
+      <div class="header__city">
+        <p>Самара</p>
+      </div>
+      <div class="header__eye">
+        <a href="#" class="header__eye-link">
+          {{ svg('id-svg-eye', 'svg-eye-header') }}
+        </a>
+      </div>
+      <div class="header__mnu-search">
+        <div id="js-burger" class="burger-btn">
+          <button>
+            {{ svg('id-svg-burger', 'svg-burger-header') }}
+          </button>
+        </div>
+        <div id="js-search-input" class="search-input search-input_mobile_hide">
+          <form action="/" class="search-input__form">
+            <input type="text" placeholder="Поиск" name="search" />
+            <button type="submit">
+              {{ svg('id-svg-loupe', 'svg-loupe-header') }}
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="header__btn">
+        <button class="btn btn-light-green">результаты анализов</button>
+      </div>
+      <div class="header__main-mnu">
+        <nav>
+          <ul class="main-mnu">
+            <li class="main-mnu__item">
+              <a href="#">Запись к врачу</a>
+            </li>
+            <li class="main-mnu__item">
+              <a href="#">Вызов на дом</a>
+            </li>
+            <li class="main-mnu__item">
+              <a href="#">Акции</a>
+            </li>
+            <li class="main-mnu__item">
+              <a href="#">Анализы</a>
+            </li>
+            <li class="main-mnu__item">
+              <a href="#">Врачи</a>
+            </li>
+            <li class="main-mnu__item">
+              <a href="#">Цены</a>
+            </li>
+            <li class="main-mnu__item">
+              <a href="#">Личный кабинет</a>
+            </li>
+            <li class="main-mnu__item">
+              <a href="#">Дмс</a>
+            </li>
+            <li class="main-mnu__item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__phone">
+        <a href="tel:+78462777703">8 (846) 277-77-03</a>
+      </div>
+      <div class="header__icons">
+
+        <a href="#" class="header__icons-basket">
+          {{ img('svg/icon-basket.svg') }}
+        </a>
+        <a href="#" class="header__icons-user">
+          {{ img('svg/icon-user.svg') }}
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="aside-mobile">
+    <div class="aside-mobile__body">
+      <button class="aside-mobile__close">
+        {{ img('svg/icon-close.svg') }}
+      </button>
+    </div>
+    <div class="aside-mobile__overlay hidden"></div>
+  </div>
+</header>

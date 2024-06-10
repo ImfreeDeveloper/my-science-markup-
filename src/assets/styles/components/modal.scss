@@ -1,0 +1,80 @@
+.modal-popup {
+  $bg-blue: #e2f1f3;
+  $bg-pink: #ffecec;
+  $color-icon-close: #8b8b8b;
+  $margin-wrapper: 2rem;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.3s ease;
+  z-index: 99999;
+  overflow: auto;
+
+  &-wrapper {
+    transition: all 0.3s ease;
+    margin-left: $margin-wrapper;
+    margin-right: $margin-wrapper;
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &-container {
+    margin: auto;
+    width: 54rem;
+  }
+
+  &-body {
+    margin-top: $margin-wrapper;
+    margin-bottom: $margin-wrapper;
+    background: #fff;
+    padding: 2.4rem 3.2rem;
+    border-radius: .6rem;
+    position: relative;
+
+    &__title {
+      display: block;
+      font-size: 2.1rem;
+      font-weight: $medium;
+      margin-bottom: 1.5rem;
+    }
+
+    &__description {
+      p {
+        display: block;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    z-index: 200;
+    color: $color-icon-close;
+    transition: 0.3s ease-in-out transform;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

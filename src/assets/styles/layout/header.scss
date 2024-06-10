@@ -1,0 +1,236 @@
+.header {
+  padding: 4rem 0;
+  @include md-block() {
+    padding: 2rem 0;
+  }
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, min-content) 1fr max-content;
+    grid-column-gap: 3.8rem;
+    grid-row-gap: 2.5rem;
+    align-items: center;
+    position: relative;
+
+    @include to(1200px) {
+      grid-column-gap: 2.8rem;
+    }
+    @include md-block() {
+      grid-column-gap: 1.5rem;
+      grid-row-gap: 1.5rem;
+    }
+  }
+  &__logo {
+    width: 22.1rem;
+    height: 4.8rem;
+
+    @include md-block() {
+      width: 19.3rem;
+    }
+    @include to(900px) {
+      width: 15.8rem;
+    }
+
+    @include sm-block() {
+      width: 3.3rem;
+      height: 3.6rem;
+    }
+    .svg-logo-header {
+      --opacityLogoPath: 0.3;
+
+      color: $color-green;
+      width: 100%;
+      height: 100%;
+      @include sm-block() {
+        display: none;
+      }
+    }
+    img {
+      display: none;
+      @include sm-block() {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__city {}
+  &__eye {
+    &-link {
+      display: block;
+      width: 4rem;
+      height: 2.5rem;
+      transition: all .3s ease-in-out;
+
+      @include to(900px) {
+        width: 3.5rem;
+        height: 2rem;
+      }
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    @include sm-block() {
+      display: none;
+    }
+  }
+  &__mnu-search {
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    .burger-btn {
+      margin-right: 3.8rem;
+      flex-shrink: 0;
+      @include to(1200px) {
+        margin-right: .8rem;
+      }
+    }
+    .search-input_mobile_hide {
+      @include xs-block() {
+        flex: none;
+      }
+    }
+    .search-input {
+      flex: 1;
+    }
+    @include to(900px) {
+      grid-column: 1 / span 4;
+      grid-row: 2 / 2;
+    }
+
+    @include sm-block() {
+      grid-column: 1 / span 5;
+      padding-right: 9rem;
+      justify-content: flex-start;
+    }
+  }
+  &__btn {
+    @include to(900px) {
+      grid-column: 5 / -1;
+    }
+    .btn {
+      height: 4rem;
+    }
+
+    @include xs-block() {
+      display: none;
+    }
+  }
+  &__main-mnu {
+    grid-column: 1 / span 4;
+    grid-row: 2 / 2;
+    z-index: 2;
+    @include to(900px) {
+      display: none;
+    }
+  }
+  &__phone {
+    grid-column: 4  / -1;
+    grid-row: 2 / 2;
+    z-index: 1;
+    text-align: right;
+    padding-right: 15rem;
+
+    a {
+      font-size: 1.8rem;
+      line-height: 1!important;
+      font-weight: $semiBold;
+
+      @include to(1200px) {
+        font-size: 1.6rem;
+      }
+    }
+
+    @include to(1200px) {
+      padding-right: 13rem;
+    }
+
+    @include md-block() {
+      padding-right: 10rem;
+    }
+
+    @include to(900px) {
+      grid-column: 4  / 5;
+      grid-row: 1 / 2;
+      padding-right: 0;
+    }
+
+    @include xs-block() {
+      grid-column: 4  / -1;
+      grid-row: 1 / 2;
+    }
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    grid-column: 5   / -1;
+    grid-row: 2 / 2;
+    justify-content: flex-end;
+    z-index: 1;
+    a {
+      flex-shrink: 0;
+      line-height: 0;
+      margin-right: 3.5rem;
+      @include to(1200px) {
+        margin-right: 3rem;
+      }
+      @include md-block() {
+        margin-right: 1.8rem;
+      }
+      img {
+        width: 3.8rem;
+        height: 3.8rem;
+        @include to(1200px) {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    };
+
+    @include to(900px) {
+      font-size: 1.6rem;
+      grid-column: 5 / -1;
+    }
+  }
+
+  .aside-mobile__body {
+    .header__eye {
+      display: block;
+      position: absolute;
+      right: 6.5rem;
+      top: 2.9rem;
+    }
+    .header__btn {
+      display: block;
+      margin-bottom: 2rem;
+      .btn {
+        font-size: 1.2rem;
+      }
+    }
+    .header__main-mnu {
+      display: block;
+      .main-mnu {
+        flex-direction: column;
+
+        &__item {
+          margin-left: 0;
+          display: flex;
+          a {
+            padding: .8rem 0;
+            cursor: default;
+          }
+
+          @include to(1200px) {
+            margin-left: 0;
+          }
+          @include md-block() {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

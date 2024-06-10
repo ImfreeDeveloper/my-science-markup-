@@ -1,0 +1,103 @@
+{% macro tile(formBr) %}
+	{% set classNameformBr = formBr ? 'tile_form-br_' ~ formBr: '' %}
+	<div class="tile {{ classNameformBr }}"></div>
+{% endmacro %}
+
+{% macro form_field(name, label='', type='text', placeholder='') %}
+	<div class="form-field">
+		<label class="form-field__label" for="{{ name }}_id">{{ label }}</label>
+		<div class="form-field__input">
+			<input id="{{ name }}_id" name="{{ name }}" type="{{ type }}" placeholder="{{ placeholder }}" />
+		</div>
+		<div class="form-field__messages"></div>
+	</div>
+{% endmacro %}
+
+
+{% macro modal() %}
+	{% import _self as inputs %}
+	<div class="modal-popup hidden">
+		<div class="modal-popup-wrapper" >
+			<div class="modal-popup-container">
+				<div class="modal-popup-body">
+					<div id="js-modal-text" class="modal-popup-body__block hidden">
+						<h3 class="modal-popup-body__title">Заголовок</h3>
+						<div class="modal-popup-body__description">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, ad aut beatae consectetur cumque deserunt dicta et fugiat illum incidunt maxime molestias nam nemo pariatur, porro provident rerum ullam voluptate!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, ad aut beatae consectetur cumque deserunt dicta et fugiat illum incidunt maxime molestias nam nemo pariatur, porro provident rerum ullam voluptate!</p>
+						</div>
+					</div>
+
+					<div id="js-modal-sign-in" class="modal-popup-body__block hidden">
+						<div class="js-loader modal-popup-body__loader hidden">
+							<div class="loader"></div>
+						</div>
+						<form action="#" class="form" id="js-form-auth">
+							{{ inputs.form_field("name", 'Имя', 'text', '') }}
+							{{ inputs.form_field("surname", 'Фамилия', 'text', '') }}
+							{{ inputs.form_field("phone", 'Телефон', 'text', '') }}
+							{{ inputs.form_field("email", 'E-mail', 'text', '') }}
+							{{ inputs.form_field("password", 'Пароль', 'password', '') }}
+							<button type="submit" class="js-send-auth btn btn-red form__btn">Отправить</button>
+						</form>
+						<div class="js-success modal-popup-body__success hidden">
+							<p class="modal-popup-body__success-title">Ваша заявка Уё!)))</p>
+						</div>
+					</div>
+
+					<span class="modal-popup-close icon-close">
+            <img src="./images/svg/icon-close.svg" alt="close" />
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{#{% macro form_input(name, value='', title=name, type='text') %}#}
+{#<div class="form-group">#}
+{#	<label class="form-label" for="{{ name }}_id">{{ title }}</label>#}
+{#	<input class="form-control" id="{{ name }}_id" name="{{ name }}" type="{{ type }}" value="{{ value | escape }}">#}
+{#</div>#}
+{#{% endmacro %}#}
+
+{#{% macro form_textarea(name, value='', title=name) %}#}
+{#<div class="form-group">#}
+{#	<label class="form-label" for="{{ name }}_id">{{ title }}</label>#}
+{#	<textarea class="form-control" name="{{ name }}" id="{{ name }}_id" cols="20" rows="5"></textarea>#}
+{#</div>#}
+{#{% endmacro %}#}
+
+{#{% macro feedback_form(action="", method="POST") %}#}
+{#<form class="form" action="{{ action }}" method="{{ method }}">#}
+{#  {% import _self as inputs %}#}
+{#	{{ inputs.form_input("Name", '', "Имя") }}#}
+{#	{{ inputs.form_input("Email", '', "Email", 'email') }}#}
+{#	{{ inputs.form_textarea("Message", '', 'Сообщение') }}#}
+{#	<button type="submit" class="btn btn-primary">Отправить</button>#}
+{#</form>#}
+{#{% endmacro %}#}
+
+{#{% macro project(name, description = '', src='/images/error.png') %}#}
+{#	<div class="row">#}
+{#		<div class="col-md-2">#}
+{#			<img class="img-responsive" src="{{ src }}" alt="">#}
+{#		</div>#}
+{#		<div class="col-md-10">#}
+{#			<h3>{{ name }}</h3>#}
+{#			<p>{{ description }}</p>#}
+{#			<a href="#" class="btn btn-default">Подробнее</a>#}
+{#		</div>#}
+{#	</div>#}
+{#{% endmacro %}#}
+
+{# svg спрайт #}
+{% macro svg(id, className) %}
+	<svg class="{{ className }}">
+		<use xlink:href="./images/svg/sprite.svg#{{ id }}"></use>
+	</svg>
+{% endmacro %}
+
+{% macro img(name) %}
+	<img src="./images/{{ name }}" alt="" />
+{% endmacro %}

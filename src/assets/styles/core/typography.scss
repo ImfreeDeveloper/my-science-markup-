@@ -1,0 +1,8 @@
+@include font-face('montserrat', $path-font + '/montserrat/Montserrat-Regular', $normal, normal, ttf woff);
+@include font-face('montserrat', $path-font + '/montserrat/Montserrat-Medium', $medium, normal, ttf woff);
+@include font-face('montserrat', $path-font + '/montserrat/Montserrat-SemiBold', $semiBold, normal, ttf woff);
+@include font-face('montserrat', $path-font + '/montserrat/Montserrat-Bold', $bold, normal, ttf woff);
+
+@include font-face('montserrat-alternates', $path-font + '/montserrat-alternates/MontserratAlternates-Regular', $normal, normal, ttf woff woff2);
+@include font-face('montserrat-alternates', $path-font + '/montserrat-alternates/MontserratAlternates-Medium', $medium, normal, ttf woff woff2);
+@include font-face('montserrat-alternates', $path-font + '/montserrat-alternates/MontserratAlternates-Bold', $bold, normal, ttf woff woff2);

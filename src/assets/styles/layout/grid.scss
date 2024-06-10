@@ -1,0 +1,108 @@
+$width: $width-container;
+
+$break_md: 992px;
+$break_sm: 768px;
+$break_xs: 576px;
+$break_xxs: 480px;
+
+$offset: 30px;
+$offset_md: 15px;
+$offset_sm: 15px;
+$offset_xs: 15px;
+$offset_xxs: 15px;
+
+@mixin width-with-offset() {
+  width: calc(100% - $offset * 2);
+
+  @include md-block(){
+    width: calc(100% - $offset_md * 2);
+  }
+
+  @include sm-block(){
+    width: calc(100% - $offset_sm * 2);
+  }
+
+  @include xs-block(){
+    width: calc(100% - $offset_xs * 2);
+  }
+
+  @include xxs-block(){
+    width: calc(100% - $offset_xxs * 2);
+  }
+}
+
+@mixin container-full(){
+  margin-left: $offset;
+  margin-right: $offset;
+
+  @include md-block(){
+    margin-left: $offset_md;
+    margin-right: $offset_md;
+  }
+
+  @include sm-block(){
+    margin-left: $offset_sm;
+    margin-right: $offset_sm;
+  }
+
+  @include xs-block(){
+    margin-left: $offset_xs;
+    margin-right: $offset_xs;
+  }
+
+  @include xxs-block(){
+    margin-left: $offset_xxs;
+    margin-right: $offset_xxs;
+  }
+}
+
+
+@mixin container(){
+  max-width: $width;
+  justify-self: center;
+
+  @include width-with-offset();
+  @include container-full();
+}
+
+@mixin md-block(){
+  @media screen and (max-width: $break_md){
+    @content;
+  }
+}
+
+@mixin sm-block(){
+  @media screen and (max-width: $break_sm){
+    @content;
+  }
+}
+
+@mixin xs-block(){
+  @media screen and (max-width: $break_xs){
+    @content;
+  }
+}
+
+@mixin xxs-block(){
+  @media screen and (max-width: $break_xxs){
+    @content;
+  }
+}
+
+@mixin from($min_width){
+  @media screen and (min-width: $min_width){
+    @content;
+  }
+}
+
+@mixin to($max_width){
+  @media screen and (max-width: $max_width){
+    @content;
+  }
+}
+
+@mixin from-to($min_width, $max_width){
+  @media screen and (min-width: $min_width) and (max-width: $max_width){
+    @content;
+  }
+}

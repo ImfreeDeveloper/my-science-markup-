@@ -1,0 +1,73 @@
+$color-border: #e5e5e5;
+$color-focus: #000;
+$color-error: $color-red;
+
+// поля ввода
+*::-webkit-input-placeholder{
+  color: $color-black;
+  opacity: 1;
+}
+*:-moz-placeholder{
+  color: $color-black;
+  opacity: 1;
+}
+*::-moz-placeholder{
+  color: $color-black;
+  opacity: 1;
+}
+*:-ms-input-placeholder{
+  color: $color-black;
+  opacity: 1;
+}
+::placeholder{color:$color-black}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea
+{
+  display: block;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: .3rem;
+  padding: 0 1.5rem;
+  height: 5rem;
+  border: .1rem solid $color-border;
+  transition: all .3s ease-in-out;
+  width: 100%;
+  background: #fff;
+  appearance: none;
+  font-size: inherit;
+  &:hover {
+    border: .1rem solid darken($color-border, 30%);
+  }
+  &:focus {
+    border: .1rem solid $color-focus;
+  }
+}
+
+textarea {
+  padding: 1.5rem;
+  resize: none;
+  height: auto;
+  font-size: 1.6rem;
+}
+
+.form-field {
+  &.has-error {
+    input, textarea {
+      border: .1rem solid $color-error;
+    }
+  }
+  &__label {
+    display: block;
+    margin-bottom: .5rem;
+  }
+  &__input {}
+  &__messages {
+    color: $color-error;
+    font-size: 1.4rem;
+  }
+
+  margin-bottom: 1rem;
+}

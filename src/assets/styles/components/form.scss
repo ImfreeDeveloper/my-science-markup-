@@ -1,0 +1,11 @@
+.form {
+  &__btn {
+    > * {
+      width: 100%;
+    }
+    margin-top: 3rem;
+  }
+  .btn {
+    width: 100%;
+  }
+}

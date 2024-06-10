@@ -1,0 +1,76 @@
+{% from "@includes/macro.twig" import svg, img %}
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer__about">
+        <p>Медицинская компания Моя Наука</p>
+        <p>© ООО «Наука-Самара», 2005 - 2024</p>
+        <a href="mailto:info@naykalab.ru">info@naykalab.ru</a>
+      </div>
+      <div class="footer__menu">
+        <nav>
+          <ul class="footer-mnu">
+            <li class="footer-mnu__item">
+              <a href="#">о клинике</a>
+            </li>
+            <li class="footer-mnu__item">
+              <a href="#">новости</a>
+            </li>
+            <li class="footer-mnu__item">
+              <a href="#">правовые документы</a>
+            </li>
+            <li class="footer-mnu__item">
+              <a href="#">вакансии</a>
+            </li>
+            <li class="footer-mnu__item">
+              <a href="#">цены</a>
+            </li>
+            <li class="footer-mnu__item">
+              <a href="#">акции</a>
+            </li>
+            <li class="footer-mnu__item">
+              <a href="#">пациентам</a>
+            </li>
+            <li class="footer-mnu__item">
+              <a href="#">юридическим лицам</a>
+            </li>
+            <li class="footer-mnu__item">
+              <a href="#">франчайзинг</a>
+            </li>
+            <li class="footer-mnu__item">
+              <a href="#">контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__info">
+        <a href="tel:+78462777703" class="footer__phone">8 (846) 277-77-03</a>
+        <div class="footer__btn">
+          <button class="btn btn-light-green">результаты анализов</button>
+        </div>
+        <div class="footer__soc soc">
+          <a href="#" class="soc-item soc-vk">
+            {{ img('svg/icon-vk.svg') }}
+          </a>
+          <a href="#" class="soc-item soc-yt">
+            {{ img('svg/icon-yt.svg') }}
+          </a>
+          <a href="#" class="soc-item soc-tg">
+            {{ img('svg/icon-tg.svg') }}
+          </a>
+        </div>
+      </div>
+      <div class="footer__logo">
+        <a href="/">
+          {{ svg('id-svg-logo', 'svg-logo-footer') }}
+        </a>
+      </div>
+    </div>
+    <p class="footer__warn">Внимание! Информация на сайте не является публичной офертой. Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ч. 2 ст. 437 Гражданского кодекса Российской Федерации.</p>
+  </div>
+  <div class="footer__arc">
+    {{ img('svg/arc.svg') }}
+  </div>
+</footer>
+

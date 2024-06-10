@@ -1,0 +1,145 @@
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+
+  * {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  min-width: 32rem;
+  line-height: $baseLineHeight;
+  font-size: $baseFontSize;
+  font-family: $baseFont;
+  font-weight: $medium;
+  color: $color-text;
+}
+
+// Header Styles
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+
+  a {
+    font-weight: inherit;
+  }
+}
+
+// Text Styles
+strong {
+  font-weight: $bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.hidden-scroll {
+  overflow: hidden !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.layout {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+
+  main,
+  .header,
+  .footer {
+    display: grid;
+    align-content: baseline;
+
+    > * {
+      display: grid;
+      align-content: baseline;
+    }
+  }
+}
+
+.container {
+  @include container();
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: fade-out(#fff, .2);
+  z-index: 100;
+  &:before {
+    position: relative;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 7rem;
+    height: 7rem;
+    display: block;
+    margin: -3.5rem 0 0 -3.5rem;
+    border-radius: 50%;
+    border-top: .2rem solid $color-black;
+    animation: cb_load 1s linear 1s normal infinite;
+    animation-delay: 0s;
+    transition: opacity .3s ease;
+  }
+}
+
+@keyframes cb_load {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+.link {
+  &:hover {
+    text-decoration: underline;
+  }
+  &-underline {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.is-desktop {
+  @include sm-block() {
+    display: none;
+  }
+}
+.is-mobile {
+  display: none;
+
+  @include sm-block() {
+    display: block;
+  }
+}
