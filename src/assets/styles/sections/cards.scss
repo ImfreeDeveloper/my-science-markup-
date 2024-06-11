@@ -1,4 +1,9 @@
 .cards {
+  .swiper-slide {
+    .card {
+      padding: .6rem;
+    }
+  }
   .swiper-pagination {
     position: relative;
     margin-top: 3rem;
