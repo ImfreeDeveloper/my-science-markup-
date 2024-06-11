@@ -73,6 +73,35 @@
 	</div>
 {% endmacro %}
 
+{% macro serviceMain(title, text, img) %}
+	<div class="sec-services__main">
+		<div class="sec-services__main-bg"
+				 style="background-image: url('./images/{{ img }}');">
+		</div>
+		<div class="sec-services__main-wrap">
+			<div class="sec-services__main-logo">
+				{{ _self.svg('id-svg-logo', 'svg-logo-service') }}
+			</div>
+			<h3 class="sec-services__main-title">{{ title }}</h3>
+			<p class="sec-services__main-text">{{ text }}</p>
+			<a href="#" class="btn btn-light-green">подробнее</a>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro serviceItem(title, text) %}
+	<div class="sec-services__item">
+		<span class="sec-services__item-circle">
+			{{ _self.img('svg/icon-circle.svg') }}
+		</span>
+		<div class="sec-services__item-wrap">
+			<h3 class="sec-services__item-title">{{ title }}</h3>
+			<p class="sec-services__item-text">{{ text }}</p>
+			<a href="#" class="btn btn-light-green">подробнее</a>
+		</div>
+	</div>
+{% endmacro %}
+
 {#{% macro form_input(name, value='', title=name, type='text') %}#}
 {#<div class="form-group">#}
 {#	<label class="form-label" for="{{ name }}_id">{{ title }}</label>#}

@@ -1,5 +1,5 @@
 {% extends "layouts::main.twig" %}
-{% from "@includes/macro.twig" import modal, card %}
+{% from "@includes/macro.twig" import modal, card, serviceMain, serviceItem %}
 
 {% block content %}
   <section class="sec sec-ad">
@@ -25,6 +25,48 @@
       </div>
     </div>
 
+  </section>
+  <section class="sec sec-services">
+    <div class="container">
+      <div class="sec__title">
+        <h3>Медицинская компания Моя Наука</h3>
+      </div>
+      <div class="sec-services__grid">
+        {{ serviceMain(
+          'щитовидная\nжелеза',
+          'инновационный центр лечения и диагностики',
+          'service1.png'
+        ) }}
+        {{ serviceMain(
+          'центр\nурологии',
+          'инновационный центр профессора Зимичева',
+          'service2.png'
+        ) }}
+        {{ serviceItem(
+          'лаборатория',
+          'Более 3000 наименований исследований. Анализы по Сito. Широкая сеть филиалов для взятия биоматериала. Результаты онлайн.'
+        ) }}
+        {{ serviceItem(
+          'клиника',
+          'Квалифицированные врачи различных специальностей Широкий спектр медицинских услуг. Выезд врача и помощь на дому.'
+        ) }}
+        {{ serviceItem(
+          'пластическая хирургия',
+          'Ведущие специалисты Москвы и Самары. Широкий спектр услуг. Высокие стандарты качества работы. Все для вашей красоты и здоровья.'
+        ) }}
+        {{ serviceItem(
+          'стационар',
+          'Комфортное пребывание. Современное оборудование. Уникальные операции. Высококвалифицированный персонал.'
+        ) }}
+      </div>
+    </div>
+  </section>
+  <section class="sec sec-patient">
+    <div class="container">
+      <div class="sec__title">
+        <h3>Пациенту</h3>
+      </div>
+    </div>
   </section>
 
 
