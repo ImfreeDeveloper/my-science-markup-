@@ -53,16 +53,19 @@ em {
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+  grid-auto-columns: 100%;
 
   main,
   .header,
   .footer {
     display: grid;
     align-content: baseline;
+    grid-auto-columns: 100%;
 
     > * {
       display: grid;
       align-content: baseline;
+      grid-auto-columns: 100%;
     }
   }
 

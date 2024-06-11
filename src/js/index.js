@@ -1,5 +1,6 @@
 import '../assets/styles/style.scss'
 import './header'
+import './sliders'
 // import './modal'
 //
 // // eslint-disable-next-line import/no-extraneous-dependencies

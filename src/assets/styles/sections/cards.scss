@@ -1,7 +1,16 @@
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 4rem;
+  .swiper-pagination {
+    position: relative;
+    margin-top: 3rem;
+    &-bullet {
+      width: 1.1rem;
+      height: 1.1rem;
+      margin: 0 .2rem;
+      &-active {
+        background-color: $color-green;
+      }
+    }
+  }
 }
 
 .card {
@@ -19,6 +28,29 @@
       bottom: 0;
       padding-left: 2.3rem;
       padding-bottom: 3rem;
+
+      @include to(1200px) {
+        padding-bottom: 4.9rem;
+      }
+
+      @include md-block() {
+        padding-bottom: 2.4rem;
+      }
+
+      @include sm-block() {
+        padding-left: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+
+      @include xs-block() {
+        padding-left: 2.3rem;
+        padding-bottom: 3rem;
+      }
+
+      @include to(400px) {
+        padding-left: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
     }
     &-leaf {
       width: 5.5rem;
@@ -28,6 +60,34 @@
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
+
+      @include to(1200px) {
+        width: 6rem;
+        height: 6rem;
+        margin-bottom: .5rem;
+      }
+
+      @include md-block() {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+
+      @include sm-block() {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-bottom: .5rem;
+      }
+
+      @include xs-block() {
+        width: 6rem;
+        height: 6rem;
+      }
+
+      @include xxs-block() {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-bottom: 0;
+      }
     }
     &-caption {
       display: flex;
@@ -36,11 +96,61 @@
       font-family: $secondFont;
       line-height: .9;
       white-space: pre-line;
-      margin-bottom: .5rem;
+      margin-bottom: 1rem;
+
+      @include to(1200px) {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+      }
+
+      @include md-block() {
+        font-size: 3rem;
+      }
+
+      @include sm-block() {
+        font-size: 2rem;
+      }
+
+      @include xs-block() {
+        font-size: 4rem;
+      }
+
+      @include xxs-block() {
+        font-size: 3rem;
+      }
     }
     &-description {
       font-size: 1.2rem;
+      font-weight: $normal;
       max-width: 16rem;
+      line-height: 1;
+
+      @include to(1200px) {
+        font-size: 1.4rem;
+        max-width: 22.1rem;
+        line-height: 1.3;
+      }
+
+      @include md-block() {
+        font-size: 1.2rem;
+        max-width: 16rem;
+        line-height: 1;
+      }
+
+      @include sm-block() {
+        font-size: 1.1rem;
+        max-width: 13rem;
+      }
+
+      @include xs-block() {
+        font-size: 1.6rem;
+        max-width: 22.1rem;
+      }
+
+      @include xxs-block() {
+        font-size: 1.4rem;
+        max-width: 16rem;
+      }
     }
   }
   &__info {
@@ -59,6 +169,18 @@
         font-size: 1.2rem;
         font-weight: $normal;
         font-family: $baseFont;
+
+        @include sm-block() {
+          margin-top: 0.3rem;
+        }
+      }
+
+      @include md-block() {
+        font-size: 2rem;
+      }
+
+      @include sm-block() {
+        font-size: 1.8rem;
       }
     }
     &-text {
@@ -66,11 +188,30 @@
       line-height: 1.3;
       font-weight: normal;
       white-space: pre-line;
+
+      @include sm-block() {
+        font-size: 1.2rem;
+        line-height: 1.2;
+      }
     }
     .btn {
       display: inline-flex;
       margin-top: 3rem;
       padding: 0 4rem;
+
+      @include md-block() {
+        margin-top: 2rem;
+        height: 4rem;
+        font-size: 1.4rem;
+      }
+
+      @include xs-block() {
+        height: 4.5rem;
+      }
+
+      @include xxs-block() {
+        display: flex;
+      }
     }
   }
   &_color {

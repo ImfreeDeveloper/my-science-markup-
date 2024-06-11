@@ -5,19 +5,28 @@
   <section class="sec sec-ad">
     <div class="container">
       <div class="cards">
-        {% for item in DATA_CARDS_AD %}
-          {{ card(
-            item.caption,
-            item.description,
-            item.title,
-            item.text,
-            item.img,
-            item.class
-          ) }}
-        {% endfor %}
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            {% for item in DATA_CARDS_AD %}
+              <div class="swiper-slide">
+                {{ card(
+                  item.caption,
+                  item.description,
+                  item.title,
+                  item.text,
+                  item.img,
+                  item.class
+                ) }}
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
     </div>
+
   </section>
+
 
 {#  {{ modal() }}#}
 {% endblock %}
