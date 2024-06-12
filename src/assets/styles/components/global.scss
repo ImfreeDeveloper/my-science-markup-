@@ -151,3 +151,36 @@ svg {
     display: block;
   }
 }
+
+.soc {
+  display: flex;
+  justify-content: center;
+  @include md-block() {
+    justify-content: flex-start;
+  }
+  @include to(650px) {
+    justify-content: center;
+  }
+  .soc-item {
+    margin-right: .9rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    flex-shrink: 0;
+    transition: all .3s ease-in-out;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include to(650px) {
+      width: 4.1rem;
+      height: 4.1rem;
+    }
+    &:hover {
+      opacity: .7;
+      @include sm-block() {
+        opacity: 1;
+        cursor: default;
+      }
+    }
+  }
+}

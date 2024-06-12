@@ -102,6 +102,37 @@
 	</div>
 {% endmacro %}
 
+{% macro patientServicesItem(title, name) %}
+	<div class="sec-patient__services-item sec-patient__services-item_{{ name }}">
+		<a href="#">{{ title }}</a>
+	</div>
+{% endmacro %}
+
+{% macro patientServicesRate() %}
+	<div class="sec-patient__services-item services-rate">
+		<a href="#" class="services-rate__logo">
+			{{ _self.svg('id-svg-logo', 'svg-logo-rate') }}
+		</a>
+		<h3 class="services-rate__title">мы ценим<br />ваше мнение</h3>
+		<p class="services-rate__text">появились предложения по улучшению качества клиентского сервиса?</p>
+		<div class="services-rate__contacts">
+			<a href="tel:+78462777703" class="services-rate__phone">+7 (846) 277-77-03</a>
+			<a href="mailto:service@naykamed.ru" class="services-rate__email">service@naykamed.ru</a>
+			<div class="services-rate__soc soc">
+				<a href="#" class="soc-item soc-vk">
+					{{ _self.img('svg/icon-vk.svg') }}
+				</a>
+				<a href="#" class="soc-item soc-yt">
+					{{ _self.img('svg/icon-yt.svg') }}
+				</a>
+				<a href="#" class="soc-item soc-tg">
+					{{ _self.img('svg/icon-tg-white.svg') }}
+				</a>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
 {#{% macro form_input(name, value='', title=name, type='text') %}#}
 {#<div class="form-group">#}
 {#	<label class="form-label" for="{{ name }}_id">{{ title }}</label>#}

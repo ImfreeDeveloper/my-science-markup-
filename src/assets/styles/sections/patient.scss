@@ -1,0 +1,162 @@
+.sec-patient {
+  position: relative;
+  padding-bottom: 10rem;
+  margin-top: 3rem;
+
+  .sec__title {
+    margin-bottom: 6rem;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 32rem;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: $color-primary;
+  }
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+  &__services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 2.3fr;
+    grid-gap: 3.5rem;
+    &-item {
+      box-shadow: rgba(0, 0, 0, 0.24) 0 .3rem .8rem;
+      border-radius: 2.9rem;
+      background-color: $color-white;
+      position: relative;
+      padding-top: 79%;
+      padding-left: 2.1rem;
+      overflow: hidden;
+      > a {
+        position: absolute;
+        bottom: 2.7rem;
+        font-size: 2.4rem;
+        font-weight: $bold;
+        font-family: $secondFont;
+        line-height: .9;
+        white-space: pre-line;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -9.4rem;
+        right: -4.5rem;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      &_analize {
+        &:after {
+          background-image: url('./images/svg/icon-patient-analize.svg');
+        }
+      }
+      &_promo {
+        &:after {
+          width: 90%;
+          height: 90%;
+          top: -6.4rem;
+          right: -4.5rem;
+          background-image: url('./images/svg/icon-patient-promo.svg');
+        }
+      }
+      &_doc {
+        &:after {
+          width: 65%;
+          height: 65%;
+          top: -0.3rem;
+          right: -2.5rem;
+          background-image: url('./images/svg/icon-patient-doc.svg');
+        }
+      }
+      &_address {
+        &:after {
+          width: 75%;
+          height: 75%;
+          top: -5.3rem;
+          right: -1.5rem;
+          background-image: url('./images/svg/icon-patient-address.svg');
+        }
+      }
+      &_call {
+        &:after {
+          width: 70%;
+          height: 70%;
+          top: -2.3rem;
+          right: -3.5rem;
+          background-image: url('./images/svg/icon-patient-call.svg');
+        }
+      }
+      &_all {
+        background-color: $color-green;
+        a {
+          color: $color-white;
+        }
+      }
+    }
+    .services-rate {
+      grid-column: 4 / 4;
+      grid-row: 1 / 3;
+      padding: 3.4rem 2rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      &__logo {
+        position: static;
+        width: 22.9rem;
+        height: 5.4rem;
+        white-space: normal;
+        margin-bottom: 3rem;
+        .svg-logo-rate {
+          --opacityLogoPath: 0.3;
+
+          color: $color-green;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &__title {
+        font-size: 4.5rem;
+        font-weight: $bold;
+        font-family: $secondFont;
+        line-height: .9;
+        color: $color-green;
+        margin-bottom: .8rem;
+      }
+      &__text {
+        max-width: 39rem;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        font-weight: $normal;
+      }
+      &__contacts {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        > a {
+          font-size: 1.6rem;
+          font-weight: $normal;
+        }
+      }
+      &__soc {
+        margin-top: 1.2rem;
+      }
+    }
+  }
+  .form-lk-patient {
+    margin-bottom: 8.3rem;
+  }
+}

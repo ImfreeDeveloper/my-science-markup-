@@ -39,6 +39,10 @@ $height-search-input-m: 4rem;
       &:focus, &:hover {
         border: none;
       }
+      &::placeholder{
+        color:$color-black;
+        font-size: 1.4rem;
+      }
     }
     button {
       flex-shrink: 0;

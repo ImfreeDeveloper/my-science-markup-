@@ -1,5 +1,5 @@
 {% extends "layouts::main.twig" %}
-{% from "@includes/macro.twig" import modal, card, serviceMain, serviceItem %}
+{% from "@includes/macro.twig" import modal, card, serviceMain, serviceItem, patientServicesItem, patientServicesRate %}
 
 {% block content %}
   <section class="sec sec-ad">
@@ -65,6 +65,34 @@
     <div class="container">
       <div class="sec__title">
         <h3>Пациенту</h3>
+      </div>
+      <div class="form-lk-patient">
+        <div class="form-lk-patient__content">
+          <h3 class="form-lk-patient__title">личный кабинет пациента</h3>
+          <form action="/" class="form-lk-patient__form">
+            <input type="text" placeholder="ваш e-mail" name="email" />
+            <input type="password" placeholder="пароль" name="password" />
+            <div class="form-lk-patient__btns">
+              <button type="submit" class="btn btn-black">войти</button>
+              <div class="form-lk-patient__links">
+                <a href="#">забыли пароль?</a>
+                <a href="#">регистрация</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form-lk-patient__img">
+          <div class="form-lk-patient__img-circle"></div>
+        </div>
+      </div>
+      <div class="sec-patient__services">
+        {{ patientServicesItem('анализы', 'analize') }}
+        {{ patientServicesItem('акции', 'promo') }}
+        {{ patientServicesItem('медсправки', 'doc') }}
+        {{ patientServicesItem('адреса\nотделений', 'address') }}
+        {{ patientServicesItem('вызов\nна дом', 'call') }}
+        {{ patientServicesItem('все\nуслуги', 'all') }}
+        {{ patientServicesRate() }}
       </div>
     </div>
   </section>
