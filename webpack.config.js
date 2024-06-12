@@ -125,7 +125,8 @@ function generateHtmlPlugins(templateDir) {
       filename: `${name}.html`,
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
       chunks: [`${name}`, 'main'],
-      inject: 'body'
+      inject: 'body',
+      minify: false
     })
   })
 }
