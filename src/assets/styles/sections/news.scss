@@ -1,0 +1,95 @@
+.sec-news {
+
+}
+.news {
+  .swiper-slide {
+    .news-item {
+      padding: .6rem;
+    }
+  }
+  .swiper-pagination {
+    position: relative;
+    margin-top: 3rem;
+    &-bullet {
+      width: 1.1rem;
+      height: 1.1rem;
+      margin: 0 .2rem;
+      &-active {
+        background-color: $color-green;
+      }
+    }
+  }
+
+  &-item {
+    &__content {
+      position: relative;
+      background-color: $color-grey1;
+      overflow: hidden;
+      padding-top: 63%;
+      box-shadow: rgba(0, 0, 0, 0.24) 0 .3rem .8rem;
+    }
+    &__wrap {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding-left: 2.7rem;
+      padding-top: 1.4rem;
+      padding-bottom: 3.4rem;
+      padding-right: 1.5rem;
+      display: flex;
+      flex-direction: column;
+
+    }
+    &__top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.8rem;
+    }
+    &__logo {
+      flex-shrink: 0;
+      width: 6rem;
+      height: 6rem;
+      display: inline-block;
+      background-image: url('./images/svg/icon-leaf.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 1.3rem;
+    }
+    &__date {
+      color: $color-primary;
+      font-size: 1.8rem;
+      font-weight: $bold;
+      line-height: 1;
+    }
+    &__caption {
+      font-size: 1.8rem;
+      font-weight: $bold;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    &__circle {
+      position: absolute;
+      top: -4.5rem;
+      right: -4.5rem;
+      opacity: .4;
+    }
+    .btn {
+      max-width: 18rem;
+      width: 100%;
+      margin-top: auto;
+    }
+  }
+
+  .swiper-slide {
+    &:nth-child(even) {
+      .news-item__circle {
+        top: auto;
+        bottom: -5rem;
+        right: -5rem;
+      }
+    }
+  }
+}

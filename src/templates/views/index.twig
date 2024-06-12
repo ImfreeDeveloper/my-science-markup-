@@ -1,5 +1,5 @@
 {% extends "layouts::main.twig" %}
-{% from "@includes/macro.twig" import modal, card, serviceMain, serviceItem, patientServicesItem, patientServicesRate %}
+{% from "@includes/macro.twig" import modal, newsItem, card, serviceMain, serviceItem, patientServicesItem, patientServicesRate %}
 
 {% block content %}
   <section class="sec sec-ad">
@@ -93,6 +93,28 @@
         {{ patientServicesItem('вызов\nна дом', 'call') }}
         {{ patientServicesItem('все\nуслуги', 'all') }}
         {{ patientServicesRate() }}
+      </div>
+    </div>
+  </section>
+  <section class="sec sec-news">
+    <div class="container">
+      <div class="sec__title">
+        <h3>Новости компании</h3>
+      </div>
+      <div class="news">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            {% for item in DATA_NEWS %}
+              <div class="swiper-slide">
+                {{ newsItem(
+                  item.date,
+                  item.caption
+                ) }}
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
     </div>
   </section>

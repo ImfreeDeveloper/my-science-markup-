@@ -73,6 +73,26 @@
 	</div>
 {% endmacro %}
 
+{% macro newsItem(date, caption) %}
+	<div class="news-item">
+		<div class="news-item__content">
+			<div class="news-item__wrap">
+				<div class="news-item__top">
+					<div class="news-item__logo"></div>
+					<p class="news-item__date">{{ date }}</p>
+				</div>
+				<div class="news-item__caption">{{ caption }}</div>
+				<a href="#" class="btn btn-light-green">подробнее</a>
+				<span class="news-item__circle">
+				{{ _self.img('svg/icon-circle.svg') }}
+			</span>
+			</div>
+		</div>
+
+
+	</div>
+{% endmacro %}
+
 {% macro serviceMain(title, text, img) %}
 	<div class="sec-services__main">
 		<div class="sec-services__main-bg"
