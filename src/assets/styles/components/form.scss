@@ -17,9 +17,28 @@
   &__content {
     padding-top: 4.6rem;
     padding-left: 7rem;
+    padding-right: 1rem;
     padding-bottom: 5.5rem;
     max-width: 55rem;
     flex: 1;
+
+    @include to(1200px) {
+      max-width: 47rem;
+    }
+
+    @include md-block() {
+      padding-top: 3.6rem;
+      padding-left: 5rem;
+      padding-bottom: 3.5rem;
+    }
+
+    @include sm-block() {
+      max-width: none;
+      padding-left: 2.2rem;
+      padding-right: 2.2rem;
+      padding-top: 2.2rem;
+      padding-bottom: 3rem;
+    }
   }
   &__title {
     font-size: 4.5rem;
@@ -27,10 +46,30 @@
     font-family: $secondFont;
     line-height: .9;
     margin-bottom: 3.3rem;
+
+    @include to(1200px) {
+      font-size: 4rem;
+    }
+
+    @include md-block() {
+      font-size: 3.2rem;
+    }
+
+    @include sm-block() {
+      font-size: 3rem;
+    }
+
+    @include xxs-block() {
+      font-size: 2.2rem;
+    }
   }
   &__form {
     input {
       margin-bottom: 2.2rem;
+
+      @include md-block() {
+        margin-bottom: 1.6rem;
+      }
     }
   }
   &__btns {
@@ -40,10 +79,35 @@
     .btn {
       max-width: 18rem;
       width: 100%;
+
+      @include md-block() {
+        max-width: 15rem;
+      }
+    }
+
+    @include xs-block() {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 2.8rem;
+      .btn {
+        height: 5.3rem;
+        width: 100%;
+        max-width: none;
+        font-size: 1.6rem;
+      }
     }
   }
   &__links {
-    margin-left: 3.3rem ;
+    margin-left: 3.3rem;
+
+    @include md-block() {
+      margin-left: 1.3rem;
+    }
+
+    @include xs-block() {
+      margin-left: 0;
+      margin-top: 2rem;
+    }
     a {
       display: block;
       font-size: 1.6rem;
@@ -54,12 +118,23 @@
       &:hover {
         color: $color-black;
       }
+
+      @include xs-block() {
+        font-size: 1.4rem;
+        margin-bottom: .5rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
   &__img {
     flex: 1;
     position: relative;
     overflow: hidden;
+    @include sm-block() {
+      display: none;
+    }
     &-circle {
       position: absolute;
       width: 64rem;

@@ -27,6 +27,9 @@
       overflow: hidden;
       padding-top: 63%;
       box-shadow: rgba(0, 0, 0, 0.24) 0 .3rem .8rem;
+      @include md-block() {
+        padding-top: 0;
+      }
     }
     &__wrap {
       position: absolute;
@@ -40,6 +43,15 @@
       padding-right: 1.5rem;
       display: flex;
       flex-direction: column;
+
+      @include md-block() {
+        position: static;
+      }
+
+      @include sm-block() {
+        padding-bottom: 2rem;
+        padding-left: 1.7rem;
+      }
 
     }
     &__top {
@@ -57,18 +69,30 @@
       background-size: contain;
       background-repeat: no-repeat;
       margin-right: 1.3rem;
+
+      @include sm-block() {
+        width: 3.8rem;
+        height: 3.8rem;
+      }
     }
     &__date {
       color: $color-primary;
       font-size: 1.8rem;
       font-weight: $bold;
       line-height: 1;
+
+      @include sm-block() {
+        font-size: 1.5rem;
+      }
     }
     &__caption {
       font-size: 1.8rem;
       font-weight: $bold;
       line-height: 1;
       margin-bottom: 1.5rem;
+      @include sm-block() {
+        font-size: 1.5rem;
+      }
     }
     &__circle {
       position: absolute;
@@ -80,6 +104,16 @@
       max-width: 18rem;
       width: 100%;
       margin-top: auto;
+
+      @include md-block() {
+        margin-top: 2rem;
+      }
+
+      @include sm-block() {
+        max-width: none;
+        height: 4rem;
+        z-index: 2;
+      }
     }
   }
 

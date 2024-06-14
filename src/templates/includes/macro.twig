@@ -123,9 +123,9 @@
 {% endmacro %}
 
 {% macro patientServicesItem(title, name) %}
-	<div class="sec-patient__services-item sec-patient__services-item_{{ name }}">
-		<a href="#">{{ title }}</a>
-	</div>
+	<a href="#" class="sec-patient__services-item sec-patient__services-item_{{ name }}">
+		<span>{{ title }}</span>
+	</a>
 {% endmacro %}
 
 {% macro patientServicesRate() %}

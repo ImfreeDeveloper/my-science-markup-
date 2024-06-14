@@ -5,6 +5,14 @@
 
   .sec__title {
     margin-bottom: 6rem;
+
+    @include md-block() {
+      margin-bottom: 4rem;
+    }
+
+    @include xs-block() {
+      margin-bottom: 3rem;
+    }
   }
 
   &:after {
@@ -26,6 +34,28 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr) 2.3fr;
     grid-gap: 3.5rem;
+
+    @include to(1200px) {
+      grid-column-gap: 2.5rem;
+      grid-row-gap: 3.5rem;
+    }
+
+    @include md-block() {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 2rem;
+      grid-row-gap: 3rem;
+    }
+
+    @include xs-block() {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 2rem;
+      grid-row-gap: 2rem;
+    }
+
+    @include to(360px) {
+      grid-template-columns: 1fr;
+    }
+
     &-item {
       box-shadow: rgba(0, 0, 0, 0.24) 0 .3rem .8rem;
       border-radius: 2.9rem;
@@ -34,7 +64,7 @@
       padding-top: 79%;
       padding-left: 2.1rem;
       overflow: hidden;
-      > a {
+      > span {
         position: absolute;
         bottom: 2.7rem;
         font-size: 2.4rem;
@@ -42,6 +72,30 @@
         font-family: $secondFont;
         line-height: .9;
         white-space: pre-line;
+
+        @include to(1200px) {
+          font-size: 2.2rem;
+        }
+
+        @include xxs-block() {
+          font-size: 1.6rem;
+          bottom: 1.7rem;
+        }
+
+        @include to(360px) {
+          font-size: 2.2rem;
+          bottom: 2.7rem;
+        }
+
+      }
+
+      @include to(1200px) {
+        grid-column-gap: 2.5rem;
+        padding-left: 1rem;
+      }
+
+      @include xxs-block() {
+        padding-left: 2rem;
       }
 
       &:after {
@@ -57,10 +111,20 @@
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
+
+        @include xxs-block() {
+          top: -4.4rem;
+          right: -3.5rem;
+        }
       }
       &_analize {
         &:after {
           background-image: url('./images/svg/icon-patient-analize.svg');
+          @include to(1200px) {
+            top: -6.4rem;
+            right: -3.5rem;
+          }
+
         }
       }
       &_promo {
@@ -79,6 +143,11 @@
           top: -0.3rem;
           right: -2.5rem;
           background-image: url('./images/svg/icon-patient-doc.svg');
+
+          @include xxs-block() {
+            top: -0.3rem;
+            right: -2.5rem;
+          }
         }
       }
       &_address {
@@ -88,6 +157,11 @@
           top: -5.3rem;
           right: -1.5rem;
           background-image: url('./images/svg/icon-patient-address.svg');
+
+          @include xxs-block() {
+            top: -2.3rem;
+            right: -3.5rem;
+          }
         }
       }
       &_call {
@@ -97,11 +171,16 @@
           top: -2.3rem;
           right: -3.5rem;
           background-image: url('./images/svg/icon-patient-call.svg');
+
+          @include xxs-block() {
+            top: -2.3rem;
+            right: -3.5rem;
+          }
         }
       }
       &_all {
         background-color: $color-green;
-        a {
+        span {
           color: $color-white;
         }
       }
@@ -114,6 +193,28 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+
+      @include to(1200px) {
+        padding: 2rem 2rem 2rem 2rem;
+      }
+
+      @include md-block() {
+        padding: 3.4rem 2rem 2rem 2rem;
+        grid-column: 1 / span 3;
+        grid-row: 3 / 3;
+        margin-top: 2rem;
+      }
+
+      @include xs-block() {
+        grid-column: 1 / span 2;
+        grid-row: 4 / 4;
+      }
+
+      @include to(360px) {
+        grid-column: 1 / 1;
+        grid-row: auto;
+      }
+
       &__logo {
         position: static;
         width: 22.9rem;
@@ -127,6 +228,23 @@
           width: 100%;
           height: 100%;
         }
+
+        @include to(1200px) {
+          width: 17.2rem;
+          height: 3.6rem;
+        }
+
+        @include md-block() {
+          width: 23.5rem;
+          height: 5.4rem;
+
+          margin-bottom: 2rem;
+        }
+
+        @include xxs-block() {
+          width: 14.5rem;
+          height: 3.4rem;
+        }
       }
       &__title {
         font-size: 4.5rem;
@@ -135,12 +253,41 @@
         line-height: .9;
         color: $color-green;
         margin-bottom: .8rem;
+
+        @include to(1200px) {
+          font-size: 3.4rem;
+        }
+
+        @include md-block() {
+          font-size: 4rem;
+
+          br {
+            display: none;
+          }
+        }
+
+        @include xxs-block() {
+          font-size: 2.7rem;
+        }
       }
       &__text {
         max-width: 39rem;
         font-size: 1.6rem;
         line-height: 1.2;
         font-weight: $normal;
+
+        @include to(1200px) {
+          font-size: 1.4rem;
+        }
+
+        @include md-block() {
+          font-size: 1.6rem;
+          margin-bottom: 2.2rem;
+        }
+
+        @include xxs-block() {
+          font-size: 1.4rem;
+        }
       }
       &__contacts {
         margin-top: auto;
@@ -149,14 +296,48 @@
         > a {
           font-size: 1.6rem;
           font-weight: $normal;
+          @include to(1200px) {
+            font-size: 1.4rem;
+          }
+
+          @include md-block() {
+            font-size: 1.6rem;
+          }
+
+          @include xxs-block() {
+            font-size: 1.4rem;
+          }
         }
       }
       &__soc {
         margin-top: 1.2rem;
+        @include md-block() {
+          justify-content: center;
+        }
+
+        .soc-item {
+          @include xxs-block() {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
       }
     }
   }
   .form-lk-patient {
     margin-bottom: 8.3rem;
+    @include to(1200px) {
+      margin-bottom: 6.9rem;
+    }
+    @include md-block() {
+      margin-bottom: 3.4rem;
+    }
+
+    @include xs-block() {
+      margin-bottom: 8rem;
+    }
+    @include xxs-block() {
+      margin-bottom: 6rem;
+    }
   }
 }

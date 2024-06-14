@@ -61,63 +61,63 @@
       </div>
     </div>
   </section>
-{#  <section class="sec sec-patient">#}
-{#    <div class="container">#}
-{#      <div class="sec__title">#}
-{#        <h3>Пациенту</h3>#}
-{#      </div>#}
-{#      <div class="form-lk-patient">#}
-{#        <div class="form-lk-patient__content">#}
-{#          <h3 class="form-lk-patient__title">личный кабинет пациента</h3>#}
-{#          <form action="/" class="form-lk-patient__form">#}
-{#            <input type="text" placeholder="ваш e-mail" name="email" />#}
-{#            <input type="password" placeholder="пароль" name="password" />#}
-{#            <div class="form-lk-patient__btns">#}
-{#              <button type="submit" class="btn btn-black">войти</button>#}
-{#              <div class="form-lk-patient__links">#}
-{#                <a href="#">забыли пароль?</a>#}
-{#                <a href="#">регистрация</a>#}
-{#              </div>#}
-{#            </div>#}
-{#          </form>#}
-{#        </div>#}
-{#        <div class="form-lk-patient__img">#}
-{#          <div class="form-lk-patient__img-circle"></div>#}
-{#        </div>#}
-{#      </div>#}
-{#      <div class="sec-patient__services">#}
-{#        {{ patientServicesItem('анализы', 'analize') }}#}
-{#        {{ patientServicesItem('акции', 'promo') }}#}
-{#        {{ patientServicesItem('медсправки', 'doc') }}#}
-{#        {{ patientServicesItem('адреса\nотделений', 'address') }}#}
-{#        {{ patientServicesItem('вызов\nна дом', 'call') }}#}
-{#        {{ patientServicesItem('все\nуслуги', 'all') }}#}
-{#        {{ patientServicesRate() }}#}
-{#      </div>#}
-{#    </div>#}
-{#  </section>#}
-{#  <section class="sec sec-news">#}
-{#    <div class="container">#}
-{#      <div class="sec__title">#}
-{#        <h3>Новости компании</h3>#}
-{#      </div>#}
-{#      <div class="news">#}
-{#        <div class="swiper">#}
-{#          <div class="swiper-wrapper">#}
-{#            {% for item in DATA_NEWS %}#}
-{#              <div class="swiper-slide">#}
-{#                {{ newsItem(#}
-{#                  item.date,#}
-{#                  item.caption#}
-{#                ) }}#}
-{#              </div>#}
-{#            {% endfor %}#}
-{#          </div>#}
-{#          <div class="swiper-pagination"></div>#}
-{#        </div>#}
-{#      </div>#}
-{#    </div>#}
-{#  </section>#}
+  <section class="sec sec-patient">
+    <div class="container">
+      <div class="sec__title">
+        <h3>Пациенту</h3>
+      </div>
+      <div class="form-lk-patient">
+        <div class="form-lk-patient__content">
+          <h3 class="form-lk-patient__title">личный кабинет пациента</h3>
+          <form action="/" class="form-lk-patient__form">
+            <input type="text" placeholder="ваш e-mail" name="email" />
+            <input type="password" placeholder="пароль" name="password" />
+            <div class="form-lk-patient__btns">
+              <button type="submit" class="btn btn-black">войти</button>
+              <div class="form-lk-patient__links">
+                <a href="#">забыли пароль?</a>
+                <a href="#">регистрация</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form-lk-patient__img">
+          <div class="form-lk-patient__img-circle"></div>
+        </div>
+      </div>
+      <div class="sec-patient__services">
+        {{ patientServicesItem('анализы', 'analize') }}
+        {{ patientServicesItem('акции', 'promo') }}
+        {{ patientServicesItem('медсправки', 'doc') }}
+        {{ patientServicesItem('адреса\nотделений', 'address') }}
+        {{ patientServicesItem('вызов\nна дом', 'call') }}
+        {{ patientServicesItem('все\nуслуги', 'all') }}
+        {{ patientServicesRate() }}
+      </div>
+    </div>
+  </section>
+  <section class="sec sec-news">
+    <div class="container">
+      <div class="sec__title">
+        <h3>Новости компании</h3>
+      </div>
+      <div class="news">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            {% for item in DATA_NEWS %}
+              <div class="swiper-slide">
+                {{ newsItem(
+                  item.date,
+                  item.caption
+                ) }}
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 {#  {{ modal() }}#}
