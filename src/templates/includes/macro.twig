@@ -13,7 +13,6 @@
 	</div>
 {% endmacro %}
 
-
 {% macro modal() %}
 	{% import _self as inputs %}
 	<div class="modal-popup hidden">
@@ -53,7 +52,6 @@
 		</div>
 	</div>
 {% endmacro %}
-
 
 {% macro card(caption, description, title, text, img, className='') %}
 	<div class="card {{ className }}">
@@ -126,6 +124,48 @@
 	<a href="#" class="sec-patient__services-item sec-patient__services-item_{{ name }}">
 		<span>{{ title }}</span>
 	</a>
+{% endmacro %}
+
+{% macro analysisPriceItem(title, descr, price) %}
+	<div class="sec-analysis__price-item">
+		<div class="sec-analysis__price-descr">
+			<h4>{{ title }}</h4>
+			<p>{{ descr }}</p>
+		</div>
+		<div class="sec-analysis__price-deadline">
+			<p>Срок исполнения: 3-7</p>
+			<p>Код: 1236</p>
+		</div>
+		<div class="sec-analysis__price-info">
+			<i>{{ price }} р</i>
+			<button class="btn btn-light-green btn-add-cart">
+				{{ _self.svg('id-cart', 'svg-cart') }}
+			</button>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro analysisMenuItem(name, submenu) %}
+	<li class="sec-analysis__menu-item">
+		<a href="#">
+			{{ name }}
+			{% if submenu|length > 0 %}
+				<span>
+					{{ _self.svg('id-arrow-right', 'svg-arrow-right') }}
+				</span>
+			{% endif %}
+		</a>
+		{% if submenu|length > 0 %}
+			<ul>
+				{% for item in submenu %}
+					<li>
+						<a href="#">{{ item.name }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+
+	</li>
 {% endmacro %}
 
 {% macro patientServicesRate() %}

@@ -1,0 +1,130 @@
+{% extends "layouts::main.twig" %}
+{% from "@includes/macro.twig" import modal, analysisPriceItem, svg, analysisMenuItem, newsItem, card, serviceMain, serviceItem, patientServicesItem, patientServicesRate %}
+
+{% block content %}
+  <section class="sec sec-analysis">
+    <div class="container">
+      <div class="sec__title">
+        <h3>Сдать анализы в Самаре</h3>
+      </div>
+      <div class="sec-analysis__wrap">
+        <div class="sec-analysis__menu">
+          <a href="#" class="sec-analysis__menu-select">
+            <i>выбрать медицинскую услугу</i>
+            <span>
+              {{ svg('id-arrow-right', 'svg-arrow-right') }}
+            </span>
+          </a>
+          <nav>
+            <ul class="sec-analysis__menu-list">
+              {% for item in DATA_ANALIZE_MENU %}
+                {{ analysisMenuItem(item.name, item.submenu) }}
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+        <div class="sec-analysis__content">
+          <div class="sec-analysis__form form-lk-patient">
+            <div class="form-lk-patient__content">
+              <h3 class="form-lk-patient__title">личный кабинет пациента</h3>
+              <form action="/" class="form-lk-patient__form">
+                <input type="text" placeholder="ваш e-mail" name="email" />
+                <input type="password" placeholder="пароль" name="password" />
+                <div class="form-lk-patient__btns">
+                  <button type="submit" class="btn btn-black">войти</button>
+                  <div class="form-lk-patient__links">
+                    <a href="#">забыли пароль?</a>
+                    <a href="#">регистрация</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="form-lk-patient__img">
+              <div class="form-lk-patient__img-circle"></div>
+            </div>
+          </div>
+          <div class="sec-analysis__price">
+            <p class="sec-analysis__price-caption">Цены представлены за каждый анализ без учета стоимости преаналитической подготовки к исследованию.</p>
+            <div class="sec-analysis__price-list">
+              {{ analysisPriceItem(
+                'женский базовый чекап',
+                'Лабораторный профиль позволяющий комплексно оценить состояние здоровья, функцию основных органов и систем. Разработан специально для женщин.',
+                '2700'
+              ) }}
+              {{ analysisPriceItem(
+                'Женский чекап Расширенный',
+                'Лабораторный профиль, позволяющий широко оценить состояние здоровья. Разработан специально для женщин.',
+                '9200'
+              ) }}
+              {{ analysisPriceItem(
+                'Мужской чекап Базовый',
+                'Базовый лабораторный профиль для мужчин',
+                '1100'
+              ) }}
+              {{ analysisPriceItem(
+                'Мужской чекап Стандартный',
+                'Лабораторный профиль позволяющий комплексно оценить состояние здоровья, функцию основных органов и систем. Разработан специально для мужчин.',
+                '3000'
+              ) }}
+              {{ analysisPriceItem(
+                'Мужской чекап Расширенный',
+                'Лабораторный профиль, позволяющий широко оценить состояние здоровья. Разработан специально для мужчин.',
+                '7400'
+              ) }}
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+{#  <section class="sec sec-ad">#}
+{#    <div class="container">#}
+{#      <div class="cards">#}
+{#        <div class="swiper">#}
+{#          <div class="swiper-wrapper">#}
+{#            {% for item in DATA_CARDS_AD %}#}
+{#              <div class="swiper-slide">#}
+{#                {{ card(#}
+{#                  item.caption,#}
+{#                  item.description,#}
+{#                  item.title,#}
+{#                  item.text,#}
+{#                  item.img,#}
+{#                  item.class#}
+{#                ) }}#}
+{#              </div>#}
+{#            {% endfor %}#}
+{#          </div>#}
+{#          <div class="swiper-pagination"></div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+
+{#  </section>#}
+{#  <section class="sec sec-news">#}
+{#    <div class="container">#}
+{#      <div class="sec__title">#}
+{#        <h3>Новости компании</h3>#}
+{#      </div>#}
+{#      <div class="news">#}
+{#        <div class="swiper">#}
+{#          <div class="swiper-wrapper">#}
+{#            {% for item in DATA_NEWS %}#}
+{#              <div class="swiper-slide">#}
+{#                {{ newsItem(#}
+{#                  item.date,#}
+{#                  item.caption#}
+{#                ) }}#}
+{#              </div>#}
+{#            {% endfor %}#}
+{#          </div>#}
+{#          <div class="swiper-pagination"></div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </section>#}
+{#  {{ modal() }}#}
+{% endblock %}

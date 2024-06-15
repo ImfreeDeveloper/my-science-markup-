@@ -31,6 +31,26 @@
       background-color: $color-green;
     }
   }
+  &-add-cart {
+    padding: .8rem 2.9rem;
+    height: 4.3rem;
+
+    @include to(1110px) {
+      height: 3.1rem;
+      padding: 0.8rem 2.1rem;
+    }
+    svg {
+      width: 2.7rem;
+      height: 2.7rem;
+      position: relative;
+      left: -.2rem;
+
+      @include to(1110px) {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
   &-black {
     color: $color-white;
     background-color: $color-black;
