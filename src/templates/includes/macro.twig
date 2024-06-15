@@ -125,6 +125,16 @@
 		<span>{{ title }}</span>
 	</a>
 {% endmacro %}
+{% macro doctorsItem(title, descr, photo) %}
+	<div class="sec-doctors__item">
+		<div class="sec-doctors__item-img" style="background-image: url('./images/{{ photo }}');"></div>
+		<div class="sec-doctors__item-info">
+			<p class="sec-doctors__item-title">{{ title }}</p>
+			<p class="sec-doctors__item-descr">{{ descr }}</p>
+			<a href="#" class="btn btn-light-green">Записаться</a>
+		</div>
+	</div>
+{% endmacro %}
 
 {% macro analysisPriceItem(title, descr, price) %}
 	<div class="sec-analysis__price-item">

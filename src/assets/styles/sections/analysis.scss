@@ -3,7 +3,6 @@
     width: 0.9rem;
     height: 1.4rem;
   }
-
   .sec__title {
     @include sm-block() {
       margin-bottom: 2rem;
@@ -83,19 +82,8 @@
     }
 
     &-select {
-      display: none;
-      justify-content: space-between;
-      align-items: center;
-      border-radius: 5.5rem;
-      border: .3rem solid $color-primary;
-      font-size: 1.2rem;
-      font-weight: $semiBold;
-      padding: 1rem 1.5rem;
       margin-bottom: 3rem;
-      i {
-        font-style: normal;
-
-      }
+      display: none;
 
       @include sm-block() {
         display: flex;

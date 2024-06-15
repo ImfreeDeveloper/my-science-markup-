@@ -1,0 +1,107 @@
+{% extends "layouts::main.twig" %}
+{% from "@includes/macro.twig" import svg, doctorsItem %}
+
+{% block content %}
+  <section class="sec sec-doctors">
+    <div class="container">
+      <div class="sec__title">
+        <h3>Врачи в Самаре</h3>
+      </div>
+      <div class="sec-doctors__wrap">
+        <div class="sec-doctors__menu">
+          <nav>
+            <ul>
+              <li><a href="#" class="active">Все врачи</a></li>
+              <li><a href="#">Эндокринолог</a></li>
+              <li><a href="#">Акушер-гинеколог</a></li>
+              <li><a href="#">Аллерголок-иммунолог</a></li>
+              <li><a href="#">Анестезиолог-реаниматолог</a></li>
+              <li><a href="#">Врач дневного стационара</a></li>
+              <li><a href="#">Врач УЗИ</a></li>
+              <li><a href="#">Врач функциональной диагностики</a></li>
+              <li><a href="#">Гастроэнтеролог</a></li>
+              <li><a href="#">Гематолог</a></li>
+              <li><a href="#">Гинеколог-эндокринолог</a></li>
+              <li><a href="#">Гирудотерапевт</a></li>
+              <li><a href="#">Дерматовенеролог</a></li>
+              <li><a href="#">Диетолог</a></li>
+              <li><a href="#">Инфекционист</a></li>
+              <li><a href="#">Кардиолог</a></li>
+              <li><a href="#">Лимфолог</a></li>
+              <li><a href="#">альный терапевтМану</a></li>
+              <li><a href="#">Массажист</a></li>
+              <li><a href="#">Невролог</a></li>
+              <li><a href="#">Нейрохирург</a></li>
+              <li><a href="#">Онколог</a></li>
+              <li><a href="#">Онколог-маммолог</a></li>
+              <li><a href="#">Оториноларинголог</a></li>
+              <li><a href="#">Офтальмалог</a></li>
+              <li><a href="#">Педиатр</a></li>
+              <li><a href="#">тический хирургПлас</a></li>
+              <li><a href="#">Проктолог</a></li>
+              <li><a href="#">Пульмонолог</a></li>
+              <li><a href="#">Ревматолог</a></li>
+              <li><a href="#">Рефлексотерапевт</a></li>
+              <li><a href="#">Стоматолог</a></li>
+              <li><a href="#">Стоматолог-ортодонт</a></li>
+              <li><a href="#">Стоматолог-ортопед</a></li>
+              <li><a href="#">Терапевт</a></li>
+              <li><a href="#">Травмотолог-ортопед</a></li>
+              <li><a href="#">Уролог</a></li>
+              <li><a href="#">Уролог-андролог</a></li>
+              <li><a href="#">Физиотерапия</a></li>
+              <li><a href="#">Флеболог</a></li>
+              <li><a href="#">Хирург</a></li>
+              <li><a href="#">вертебрологии</a></li>
+              <li><a href="#">Лечения Боли</a></li>
+              <li><a href="#">стно-лицевой хирург</a></li>
+              <li><a href="#">Эндоскопист</a></li>
+              <li><a href="#">Эхокардиография</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="sec-doctors__info">
+          <div class="sec-doctors__selects">
+            <a href="#" class="btn-menu-select">
+              <i>выбрать медицинский центр</i>
+              <span>
+                {{ svg('id-arrow-right', 'svg-arrow-right') }}
+              </span>
+            </a>
+            <a href="#" class="sec-doctors__btn-spec btn-menu-select">
+              <i>специальность врача</i>
+              <span>
+                {{ svg('id-arrow-right', 'svg-arrow-right') }}
+              </span>
+            </a>
+            <a href="#" class="sec-doctors__selects-quest">есть вопросы?</a>
+          </div>
+          <div class="sec-doctors__search">
+            <div class="search">
+              <form action="/" class="search__form">
+                <input type="text" placeholder="фио / специальность" name="search" />
+                <button type="submit">
+                  {{ svg('id-svg-loupe', 'svg-loupe-search') }}
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="sec-doctors__list">
+            {{ doctorsItem('Васенина Валерия Сергеевна', 'врач-пластический хирург', 'doctor1.png') }}
+            {{ doctorsItem('Габдрахманова Насима Идрисовна', 'врач-пластический хирург', 'doctor2.png') }}
+            {{ doctorsItem('Гурьев Андрей Владимирович', 'врач-пластический хирург', 'doctor3.png') }}
+            {{ doctorsItem('Денисов Михаил Валентинович', 'врач-пластический хирург', 'doctor4.png') }}
+            {{ doctorsItem('Джарар Рами Мэзен', 'врач-пластический хирург', 'doctor5.png') }}
+            {{ doctorsItem('Дмитриев Вадим Александрович', 'врач-пластический хирург', 'doctor6.png') }}
+            {{ doctorsItem('Зимичев Александр Анатольевич', 'врач-пластический хирург', 'doctor7.png') }}
+            {{ doctorsItem('Дурасов Владимир Владимирович', 'врач-пластический хирург', 'doctor8.png') }}
+          </div>
+          <div class="sec-doctors__form">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+{% endblock %}
