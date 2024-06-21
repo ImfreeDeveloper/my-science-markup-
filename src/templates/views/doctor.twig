@@ -1,0 +1,119 @@
+{% extends "layouts::main.twig" %}
+{% from "@includes/macro.twig" import svg %}
+
+{% block content %}
+  <section class="sec sec-doctor">
+    <div class="container">
+      <div class="sec__title">
+        <h3>Врачи в Самаре</h3>
+      </div>
+      <div class="sec-doctor__about">
+        <div class="sec-doctor__left">
+          <div class="sec-doctor__about-img" style="background-image: url('./images/doctor1.png');"></div>
+        </div>
+        <div class="sec-doctor__right">
+          <div class="sec-doctor__about-info">
+            <div class="sec-doctor__about-info-name">
+              <p class="sec-doctor__about-info-title">Васенина Валерия Сергеевна</p>
+              <p class="sec-doctor__about-info-descr">врач-пластический хирург</p>
+            </div>
+            <div class="sec-doctor__about-info-exper">
+              <p>Опыт работы: 15 лет</p>
+            </div>
+            <div class="sec-doctor__about-btns">
+              <a href="#" class="btn btn-like">
+                <span>{{ svg('id-heart', 'svg-heart') }}</span>
+              </a>
+              <a href="#" class="btn btn-green">Записаться</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sec-doctor__details">
+        <div class="sec-doctor__left">
+          <p class="sec-doctor__details-name">Специализация:</p>
+        </div>
+        <div class="sec-doctor__right">
+          <div class="sec-doctor__details-descr">
+            <p>
+            - маммопластика — увеличение, подтяжка, уменьшение груди;<br />
+            - блефаропластика— пластика век;<br />
+            - отопластика — пластика ушных раковин;<br />
+            - абдоминопластика — пластика живота;<br />
+            - липосакция, липофилинг;<br />
+            - интимная пластика для женщин;<br />
+            - подтяжка лица, лба..<br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="sec-doctor__details">
+        <div class="sec-doctor__left">
+          <p class="sec-doctor__details-name">Образование</p>
+        </div>
+        <div class="sec-doctor__right">
+          <div class="sec-doctor__details-descr">
+            <p>Высшее -<br />
+            "Самарский государственный медицинский университет". Диплом ВСГ 2056780, выдан 23.06.2008. Квалификация -"Врач" по специальности "Лечебное дело".</p>
+            <p>Интернатура<br />
+            "Самарского государственного медицинского университета", удостоверение № 2310 выдано 30.06.2009 г. по специальности "Хирургия".</p>
+            <p>Сертификат А № 3882133 выдан 30.06.2009 о присвоении специальности "Хирургия".<br />
+            Диплом о профессиональной переподготовке "Медицинского университета "Реавиз" - "Пластическая хирургия" от30.09.2015 г.<p>
+          </div>
+        </div>
+      </div>
+      <div class="sec__title">
+        <h3>Отзывы о враче</h3>
+      </div>
+      <div class="sec-doctor__details">
+        <div class="sec-doctor__left">
+          <div class="sec-doctor__details-user">
+            <p>Юлия</p>
+            <span>2023-08-10 03:08:39</span>
+          </div>
+        </div>
+        <div class="sec-doctor__right">
+          <div class="sec-doctor__details-descr">
+            <p>
+              Было сильное опущение верхнего века, никакими косметологическими процедурами данный вопрос уже не решался. Обратилась за консультацией к Васениной Валерии Сергеевне. Необходима была блефоропластика, как позже выяснилось, круговая с подтяжкой лба, чтобы результат операции радовал долгое время. В докторе расположил ее спокойный и уверенный тембр голоса. С понимание относится к пациентам и их индивидуальным особенностям. Операция прошла быстро, в палате комфортно, по всем возникающим вопросам сразу получала консультацию. Не скрою, мне сразу было больно, но так мой организм реагирует на любое операционное вмешательство. Сейчас прошло два месяца, мне все очень нравится. Лоб, глаза изменились, но эти изменения очень гармоничны. Спасибо и хороших вам пациентов.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="sec-doctor__details">
+        <div class="sec-doctor__left">
+          <div class="sec-doctor__details-user">
+            <p>Нубар</p>
+            <span>2023-08-10 03:08:39</span>
+          </div>
+        </div>
+        <div class="sec-doctor__right">
+          <div class="sec-doctor__details-descr">
+            <p>
+              Спасибо большое Валерии Сергеевне за прекрасную работу самый лучший доктор я очень рада за то что я не ошиблась в выборе хирурга она прексный доктор, человек который подержал меня и я не побоялось идти на операцию долго решалась и в итоге я решила сделать и была очень счастлива что попала именно к ней спасибо большое вам за все вы моя фея прекрасная и неповторимая.!!!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="sec-doctor__details">
+        <div class="sec-doctor__left">
+          <div class="sec-doctor__details-user">
+            <p>Наталья</p>
+            <span>2023-08-10 03:08:39</span>
+          </div>
+        </div>
+        <div class="sec-doctor__right">
+          <div class="sec-doctor__details-descr">
+            <p>
+              Делала блефоропластику верхнего века 30января этого года. Боялась, конечно, как все, но напрасно, операция была комфортной, не больно совсем, девочки. Результатом оооочень довольна, хотя прошёл всего месяц, смело рекомендую Васенину Валерию Сергеевнау, для тех, кто в поиске врача! Спасибо, что дарите женщинам красоту!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="sec-doctor__review-btn">
+        <a href="#" class="btn btn-green">оставить отзыв</a>
+      </div>
+
+    </div>
+  </section>
+{% endblock %}

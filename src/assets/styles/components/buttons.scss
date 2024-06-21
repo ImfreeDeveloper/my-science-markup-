@@ -23,6 +23,13 @@
       background-color: darken($color-green, 5%);
     }
   }
+  &-like {
+    color: $color-white;
+    background-color: $color-green;
+    &:hover {
+      background-color: darken($color-green, 5%);
+    }
+  }
   &-light-green {
     color: $color-text;
     background-color: $color-primary;

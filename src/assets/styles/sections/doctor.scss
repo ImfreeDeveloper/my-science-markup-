@@ -1,0 +1,182 @@
+.sec-doctor {
+  &__about {
+    display: flex;
+    margin-bottom: 5rem;
+    padding-left: 4.6rem;
+    &-img {
+      flex-shrink: 0;
+      width: 18rem;
+      height: 18rem;
+      border-radius: 50%;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      @include to(1200px) {
+        width: 13.7rem;
+        height: 13.7rem;
+      }
+      @include sm-block() {
+        width: 9.5rem;
+        height: 9.5rem;
+      }
+      @include xs-block() {
+        width: 12.5rem;
+        height: 12.5rem;
+      }
+
+      @include xxs-block() {
+        width: 9.5rem;
+        height: 9.5rem;
+      }
+    }
+    &-info {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      border-bottom: 1px solid #B3B3B3;
+      padding-bottom: 1.6rem;
+      &-name {
+        max-width: 27rem;
+      }
+      &-title {
+        font-size: 2.4rem;
+        font-weight: $bold;
+        font-family: $secondFont;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        @include to(1200px) {
+          font-size: 2.3rem;
+        }
+        @include sm-block() {
+          font-size: 1.2rem;
+        }
+
+        @include xs-block() {
+          font-size: 2rem;
+        }
+
+        @include xxs-block() {
+          font-size: 1.6rem;
+        }
+      }
+      &-descr {
+        font-size: 1.6rem;
+        @include to(1200px) {
+          font-size: 1.4rem;
+        }
+
+        @include xs-block() {
+          font-size: 1.2rem;
+        }
+
+        @include xxs-block() {
+          font-size: 1.1rem;
+        }
+      }
+
+    }
+    &-btns {
+      display: flex;
+
+      .btn-like {
+        flex-shrink: 0;
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin-right: 1.4rem;
+        span {
+          width: 2.3rem;
+          height: 2.1rem;
+          position: relative;
+          top: .1rem;
+        }
+        .svg-heart {
+          fill: $color-white;
+        }
+      }
+
+      .btn-green {
+        width: 18rem;
+        @include to(1200px) {
+          font-size: 1.4rem;
+          height: 4rem;
+        }
+        @include sm-block() {
+          font-size: .9rem;
+          height: 2.8rem;
+          max-width: 12rem;
+        }
+
+        @include xs-block() {
+          font-size: 1.4rem;
+          height: 3.5rem;
+        }
+
+        @include xxs-block() {
+          font-size: 1.2rem;
+          height: 3rem;
+        }
+      }
+    }
+    .sec-doctor__right {
+      align-self: center;
+    }
+  }
+  &__details {
+    display: flex;
+    margin-bottom: 5rem;
+    padding-left: 4.6rem;
+    &-name {
+      font-size: 1.8rem;
+      font-weight: $bold;
+    }
+    &-descr {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      p {
+        display: block;
+        margin-bottom: 1.5rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &-user {
+      p {
+        font-size: 1.4rem;
+        font-weight: $bold;
+        display: block;
+        margin-bottom: .5rem;
+      }
+      span {
+        font-size: 1.0rem;
+        font-weight: $medium;
+        display: block;
+      }
+    }
+  }
+  &__review-btn {
+    margin-top: 7rem;
+    .btn {
+      max-width: 18rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__form {
+    margin-top: 8rem;
+  }
+
+  &__left {
+    flex-shrink: 0;
+    width: 18.5rem;
+    margin-right: 3rem;
+  }
+  &__right {
+    flex: 1;
+  }
+}
