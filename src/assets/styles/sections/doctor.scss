@@ -3,6 +3,14 @@
     display: flex;
     margin-bottom: 5rem;
     padding-left: 4.6rem;
+    @include sm-block() {
+      padding-left: 0;
+      position: relative;
+      margin-bottom: 15rem;
+    }
+    @include xs-block() {
+      margin-bottom: 13rem;
+    }
     &-img {
       flex-shrink: 0;
       width: 18rem;
@@ -12,22 +20,17 @@
       background-size: contain;
       background-repeat: no-repeat;
       overflow: hidden;
-      @include to(1200px) {
-        width: 13.7rem;
-        height: 13.7rem;
-      }
       @include sm-block() {
-        width: 9.5rem;
-        height: 9.5rem;
+        width: 15.3rem;
+        height: 15.3rem;
       }
       @include xs-block() {
-        width: 12.5rem;
-        height: 12.5rem;
+
       }
 
       @include xxs-block() {
-        width: 9.5rem;
-        height: 9.5rem;
+        width: 11.5rem;
+        height: 11.5rem;
       }
     }
     &-info {
@@ -36,8 +39,25 @@
       justify-content: space-between;
       border-bottom: 1px solid #B3B3B3;
       padding-bottom: 1.6rem;
+      position: relative;
+      @include md-block() {
+        padding-bottom: 2.8rem;
+      }
+      @include sm-block() {
+        flex-direction: column;
+        border-bottom: none;
+        align-items: flex-start;
+        padding-bottom: 0;
+        position: static;
+      }
       &-name {
         max-width: 27rem;
+        @include md-block() {
+          padding-bottom: 2rem;
+        }
+        @include sm-block() {
+          padding-bottom: 0;
+        }
       }
       &-title {
         font-size: 2.4rem;
@@ -48,16 +68,17 @@
         @include to(1200px) {
           font-size: 2.3rem;
         }
-        @include sm-block() {
-          font-size: 1.2rem;
+        @include md-block() {
+          font-size: 2.2rem;
+          margin-bottom: .5rem;
         }
-
-        @include xs-block() {
-          font-size: 2rem;
+        @include sm-block() {
+          margin-bottom: 1rem;
         }
 
         @include xxs-block() {
           font-size: 1.6rem;
+          margin-bottom: .5rem;
         }
       }
       &-descr {
@@ -69,15 +90,32 @@
         @include xs-block() {
           font-size: 1.2rem;
         }
-
-        @include xxs-block() {
-          font-size: 1.1rem;
+      }
+      &-exper {
+        @include to(1200px) {
+          font-size: 1.4rem;
+        }
+        @include md-block() {
+          position: absolute;
+          bottom: 2.7rem;
+          left: 0;
+        }
+        @include sm-block() {
+          position: static;
+        }
+        @include xs-block() {
+          font-size: 1.2rem;
         }
       }
-
     }
     &-btns {
       display: flex;
+      @include sm-block() {
+        width: 100%;
+        position: absolute;
+        bottom: -7.8rem;
+        left: 0;
+      }
 
       .btn-like {
         flex-shrink: 0;
@@ -88,6 +126,11 @@
         align-items: center;
         padding: 0;
         margin-right: 1.4rem;
+        @include sm-block() {
+          order: 1;
+          margin-right: auto;
+          margin-left: 1.4rem;
+        }
         span {
           width: 2.3rem;
           height: 2.1rem;
@@ -101,25 +144,21 @@
 
       .btn-green {
         width: 18rem;
-        @include to(1200px) {
-          font-size: 1.4rem;
-          height: 4rem;
-        }
         @include sm-block() {
-          font-size: .9rem;
-          height: 2.8rem;
-          max-width: 12rem;
+          order: 0;
+          width: auto;
+          flex: 1;
         }
 
-        @include xs-block() {
-          font-size: 1.4rem;
-          height: 3.5rem;
-        }
-
-        @include xxs-block() {
-          font-size: 1.2rem;
-          height: 3rem;
-        }
+        //@include xs-block() {
+        //  font-size: 1.4rem;
+        //  height: 3.5rem;
+        //}
+        //
+        //@include xxs-block() {
+        //  font-size: 1.2rem;
+        //  height: 3rem;
+        //}
       }
     }
     .sec-doctor__right {
@@ -133,6 +172,9 @@
     &-name {
       font-size: 1.8rem;
       font-weight: $bold;
+      @include md-block() {
+        font-size: 1.6rem;
+      }
     }
     &-descr {
       font-size: 1.4rem;
@@ -158,6 +200,19 @@
         display: block;
       }
     }
+
+    @include sm-block() {
+      padding-left: 0;
+    }
+
+    @include xs-block() {
+      flex-direction: column;
+      margin-bottom: 3rem;
+      .sec-doctor__left {
+        margin-bottom: 1rem;
+      }
+      .sec-doctor__right {}
+    }
   }
   &__review-btn {
     margin-top: 7rem;
@@ -175,6 +230,14 @@
     flex-shrink: 0;
     width: 18.5rem;
     margin-right: 3rem;
+    @include sm-block() {
+      width: 16rem;
+    }
+    @include xxs-block() {
+      width: 12rem;
+      margin-right: 1.5rem;
+
+    }
   }
   &__right {
     flex: 1;

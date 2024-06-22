@@ -113,7 +113,35 @@
       <div class="sec-doctor__review-btn">
         <a href="#" class="btn btn-green">оставить отзыв</a>
       </div>
-
+    </div>
+  </section>
+  <section class="sec sec-doctor-form">
+    <div class="container">
+      <div class="form-doctor-call">
+        <div class="form-doctor-call__content">
+          <h3 class="form-doctor-call__title">запись на приём</h3>
+          <form action="/" class="form-doctor-call__form">
+            <div class="form-doctor-call__form-left">
+              <input type="text" placeholder="специалист" name="spec" />
+              <input type="text" placeholder="адрес клиники" name="address" />
+              <input type="text" placeholder="дата приема" name="date" />
+              <input type="text" placeholder="время приема" name="time" />
+              <input type="text" placeholder="проверочный код" name="code" />
+            </div>
+            <div class="form-doctor-call__form-right">
+              <input type="text" placeholder="ваше полное фио" name="fio" />
+              <input type="text" placeholder="ваш номер телефона" name="phone" />
+              <textarea type="text" placeholder="примечание к записи" name="note"></textarea>
+              <div class="form-doctor-call__btns">
+                <button type="submit" class="btn btn-black">записаться</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form-doctor-call__img">
+          <div class="form-doctor-call__img-circle"></div>
+        </div>
+      </div>
     </div>
   </section>
 {% endblock %}
