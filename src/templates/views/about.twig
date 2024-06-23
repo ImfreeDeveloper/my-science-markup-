@@ -1,0 +1,31 @@
+{% extends "layouts::main.twig" %}
+{% from "@includes/macro.twig" import svg, aboutNumbersItem %}
+
+{% block content %}
+  <section class="sec sec-about-company">
+    <div class="container">
+      <div class="sec__title">
+        <h3>О клинике</h3>
+      </div>
+      <div class="sec-about-company__wrap">
+        <div class="sec-about-company__info">
+          <h3>о компании</h3>
+          <p>Вот уже более 18 лет в клинике «МОЯ НАУКА» лучшие врачи Самары, Москвы и Санкт-Петербурга оказывают высококвалифицированную медицинскую помощь по 38 направлениям. На базе клиники работают и отдельные центры, которые сочетают в себе две важные составляющие эффективного лечения - врачей экспертного уровня и современное оборудование. Это центры ревматологии, урологии, эндокринологии, пластической хирургии, а также центр лечения боли.</p>
+        </div>
+        <div class="sec-about-company__img"></div>
+      </div>
+
+    </div>
+  </section>
+  <section class="sec sec-about-numbers">
+    <div class="container">
+      <div class="about-numbers__list">
+        {{ aboutNumbersItem('36 тыс', 'вылеченных<br />пациентов в год', '>') }}
+        {{ aboutNumbersItem('18', 'лет<br />работы') }}
+        {{ aboutNumbersItem('2000', 'наименований<br />исследований', '>') }}
+        {{ aboutNumbersItem('6', 'операционных') }}
+      </div>
+
+    </div>
+  </section>
+{% endblock %}

@@ -125,6 +125,19 @@
 		<span>{{ title }}</span>
 	</a>
 {% endmacro %}
+
+{% macro aboutNumbersItem(title, descr, symbl = '') %}
+	<div class="about-numbers__item">
+		<p class="about-numbers__item-title">
+			{% if symbl %}
+				<span>{{ symbl }}</span>
+			{% endif %}
+			{{ title }}
+		</p>
+		<p class="about-numbers__item-descr">{{ descr }}</p>
+	</div>
+{% endmacro %}
+
 {% macro doctorsItem(title, descr, photo) %}
 	<div class="sec-doctors__item">
 		<div class="sec-doctors__item-img" style="background-image: url('./images/{{ photo }}');"></div>

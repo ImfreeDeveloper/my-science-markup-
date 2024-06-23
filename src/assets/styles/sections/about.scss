@@ -1,0 +1,214 @@
+.sec-about-company {
+  &__wrap {
+    background-color: $color-grey;
+    padding: 6rem 51rem 6rem 6rem;
+    position: relative;
+
+    @include to(1200px) {
+      padding: 4rem 53rem 4rem 4rem;
+    }
+
+    @include md-block() {
+      padding: 0;
+    }
+  }
+  &__info {
+    max-width: 51.5rem;
+    h3 {
+      display: block;
+      font-size: 4rem;
+      font-weight: $bold;
+      line-height: 1;
+      margin-bottom: 2rem;
+
+      @include to(1200px) {
+        font-size: 3rem;
+      }
+    }
+    p {
+      font-size: 1.4rem;
+      font-weight: $medium;
+      line-height: 1.3;
+    }
+    @include to(1200px) {
+      padding: 4rem;
+      max-width: none;
+    }
+
+    @include md-block() {
+      padding: 4.5rem 3rem;
+    }
+
+    @include sm-block() {
+      padding: 3.5rem 2rem;
+    }
+
+  }
+  &__img {
+    position: absolute;
+    width: 50rem;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-image: url('./images/company.png');
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include md-block() {
+      position: static;
+      width: 100%;
+      height: 37.5rem;
+      background-image: url('./images/company-m.jpg');
+      background-position: right top;
+    }
+
+    @include sm-block() {
+      height: 28rem;
+    }
+
+    @include xs-block() {
+      height: 23rem;
+    }
+
+    @include xxs-block() {
+      height: 18rem;
+    }
+  }
+}
+
+.sec-about-numbers {
+  .about-numbers {
+    &__list {
+      display: flex;
+      column-gap: 2.5rem;
+      justify-content: space-between;
+      @include to(1200px) {
+        column-gap: 1rem;
+      }
+
+      @include md-block() {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-column-gap: 2.5rem;
+        grid-row-gap: 3.5rem;
+        justify-content: center;
+      }
+
+      @include xs-block() {
+        grid-column-gap: 2rem;
+        grid-row-gap: 3rem;
+      }
+      @include xxs-block() {
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 2rem;
+      }
+    }
+    &__item {
+      display: flex;
+      align-items: flex-end;
+      background-color: $color-grey1;
+      box-shadow: rgba(0, 0, 0, 0.24) 0 .3rem .8rem;
+      padding: 4rem 2rem;
+      position: relative;
+      &-title {
+        display: flex;
+        align-items: center;
+        font-size: 5.8rem;
+        font-weight: $bold;
+        line-height: .7;
+        flex-shrink: 0;
+        margin-right: .5rem;
+        span {
+          font-size: 3.4rem;
+          font-weight: $semiBold;
+
+          @include to(1200px) {
+            font-size: 2.7rem;
+          }
+
+          @include xxs-block() {
+            font-size: 1.8rem;
+          }
+        }
+
+        @include to(1200px) {
+          font-size: 4.5rem;
+          line-height: .8;
+        }
+
+        @include xxs-block() {
+          font-size: 3.5rem;
+        }
+      }
+      &-descr {
+        flex-shrink: 0;
+        font-size: 1.2rem;
+        font-weight: $semiBold;
+
+        @include xxs-block() {
+          font-size: 1rem;
+        }
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 6.3rem;
+        height: 3.3rem;
+        top: 0;
+        right: 0;
+        margin: auto;
+        background-image: url('./images/svg/icon-arc1.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include xxs-block() {
+          width: 5.3rem;
+          height: 2.3rem;
+        }
+      }
+
+      &:nth-child(1) {
+        @include xs-block() {
+          grid-column: 1/3;
+        }
+        &:after {
+          left: -3rem;
+        }
+      }
+      &:nth-child(2) {
+        &:after {
+          left: 6rem;
+          @include xs-block() {
+            left: 4rem;
+          }
+        }
+      }
+      &:nth-child(3) {
+        @include xs-block() {
+          grid-column: 1/3;
+        }
+        &:after {
+          left: 3rem;
+        }
+      }
+      &:nth-child(4) {
+        @include xs-block() {
+          grid-column: 2/3;
+          grid-row: 2/3;
+        }
+        &:after {
+          left: 8rem;
+        }
+      }
+
+      @include xxs-block() {
+        padding: 3rem 2rem;
+      }
+    }
+  }
+}
