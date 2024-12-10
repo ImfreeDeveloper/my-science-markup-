@@ -1,5 +1,8 @@
 .header {
   padding: 4rem 0;
+  position: relative;
+  z-index: 101;
+  background-color: $color-white;
   @include md-block() {
     padding: 2rem 0;
   }
@@ -121,6 +124,28 @@
     grid-column: 1 / span 4;
     grid-row: 2 / 2;
     z-index: 2;
+    @include to(900px) {
+      display: none;
+    }
+  }
+  &__sub-mnu {
+    background-color: $color-white;
+    position: absolute;
+    z-index: 100;
+    top: 19.1rem;
+    left: 0;
+    right: 0;
+    padding-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(-100rem);
+    transition: .3s ease-in-out all;
+    &.open {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    @include md-block() {
+      top: 13.3rem;
+    }
     @include to(900px) {
       display: none;
     }

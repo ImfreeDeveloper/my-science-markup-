@@ -6,11 +6,14 @@ const overlayAside = document.querySelector('.aside-mobile__overlay')
 const headerEye = document.querySelector('.header__eye')
 const headerBtn = document.querySelector('.header__btn')
 const headerMainMnu = document.querySelector('.header__main-mnu')
+const headerSubMnu = document.querySelector('.header__sub-mnu')
 const asideMobileBody = document.querySelector('.aside-mobile__body')
 
 function hideAside() {
   bodyAside.classList.remove('show')
   overlayAside.classList.add('hidden')
+  headerSubMnu.classList.remove('open')
+  burgerBtn.classList.remove('open')
 }
 
 function moveElemInAside() {
@@ -31,7 +34,20 @@ if (burgerBtn) {
       overlayAside.classList.remove('hidden')
 
       moveElemInAside()
+    } else {
+      if (headerSubMnu.classList.contains('open')) {
+        headerSubMnu.classList.remove('open')
+      } else {
+        headerSubMnu.classList.add('open')
+      }
     }
+
+    if (burgerBtn.classList.contains('open')) {
+      burgerBtn.classList.remove('open')
+    } else {
+      burgerBtn.classList.add('open')
+    }
+
   })
 
   closeAside.addEventListener('click', () => {
