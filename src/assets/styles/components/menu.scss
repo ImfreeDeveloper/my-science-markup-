@@ -25,22 +25,49 @@
 }
 
 .sub-mnu {
-  height: 43rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, 28rem);
+  justify-content: center;
   align-content: flex-start;
+  align-items: start;
+
+  @include sm-block() {
+    justify-content: start;
+  }
+
+  @include xs-block() {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   &__item {
-    margin: 0 5rem;
+    align-self: start;
+    justify-self: start;
+    position: relative;
+    @include xs-block() {
+      justify-self: auto;
+      margin-bottom: 1.6rem;
+    }
     > a {
       color: $color-green;
       font-weight: $bold;
       font-size: 2rem;
+      @include md-block() {
+        font-size: 1.6rem;
+      }
     }
     > ul {
       margin-top: 1.6rem;
+      @include xs-block() {
+        display: none;
+      }
       li {
         margin-bottom: 1.6rem;
+        &:last-child {
+          @include xs-block() {
+            margin-bottom: 0;
+          }
+        }
         a {
           font-size: 1.4rem;
           font-weight: $medium;
@@ -49,6 +76,32 @@
           &:hover {
             color: $color-black;
           }
+        }
+      }
+    }
+    &-arrow {
+      @include xs-block() {
+        position: absolute;
+        top: .5rem;
+        right: 0;
+        width: 1.5rem;
+        height: .7rem;
+        background-image: url('/images/svg/icon-arrow.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: rotate(-180deg);
+        transition: .3s ease-in-out all;
+      }
+
+    }
+    &.open {
+      @include xs-block() {
+        .sub-mnu__item-arrow {
+          transform: rotate(0deg);
+        }
+        > ul {
+          display: block;
         }
       }
     }

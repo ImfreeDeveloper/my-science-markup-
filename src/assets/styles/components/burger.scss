@@ -11,12 +11,6 @@
 
   @include sm-block() {
     width: 5rem;
-    &:hover {
-      background-color: transparent;
-    }
-    &:active {
-      background-color: $color-border;
-    }
   }
 
   &:hover {
@@ -55,14 +49,12 @@
   }
 
   &.open {
-    @include from(900px) {
-      background-color: $color-border;
-      .burger-btn__open {
-        display: none;
-      }
-      .burger-btn__close {
-        display: flex;
-      }
+    background-color: $color-border;
+    .burger-btn__open {
+      display: none;
+    }
+    .burger-btn__close {
+      display: flex;
     }
 
   }

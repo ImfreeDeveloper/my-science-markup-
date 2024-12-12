@@ -139,16 +139,19 @@
     opacity: 0;
     transform: translateY(-100rem);
     transition: .3s ease-in-out all;
+    overflow: auto;
+    height: calc(100vh - 19.1rem);
     &.open {
       transform: translateY(0);
       opacity: 1;
     }
     @include md-block() {
-      top: 13.3rem;
+      top: 14.3rem;
+      height: calc(100vh - 14.3rem);
     }
-    @include to(900px) {
-      display: none;
-    }
+    //@include to(900px) {
+    //  display: none;
+    //}
   }
   &__phone {
     grid-column: 4  / -1;
