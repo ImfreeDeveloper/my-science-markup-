@@ -86,8 +86,6 @@
 			</span>
 			</div>
 		</div>
-
-
 	</div>
 {% endmacro %}
 
@@ -229,6 +227,23 @@
 				</a>
 			</div>
 		</div>
+	</div>
+{% endmacro %}
+
+{% macro dmsInfoItem(listText, listLi) %}
+	<div class="sec-dms__info-item">
+		{% if listText|length > 0 %}
+			{% for itemText in listText %}
+				<p>{{ itemText }}</p>
+			{% endfor %}
+		{% endif %}
+		{% if listLi|length > 0 %}
+			<ul>
+			{% for itemLi in listLi %}
+				<li>{{ itemLi }}</li>
+			{% endfor %}
+			</ul>
+		{% endif %}
 	</div>
 {% endmacro %}
 

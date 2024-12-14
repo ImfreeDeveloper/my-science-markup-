@@ -1,0 +1,193 @@
+{% extends "layouts::main.twig" %}
+{% from "@includes/macro.twig" import dmsInfoItem %}
+
+{% block content %}
+  <section class="sec sec-dms">
+    <div class="container">
+      <div class="sec__title">
+        <h3>ДМС</h3>
+      </div>
+      <div class="sec-dms__info">
+        <div class="sec-dms__info-title">
+          <h3>Уважаемые пациенты!</h3>
+          <p>Медицинская компания Наука оказывает широкий спектр услуг<br />экспертного качества по полисам ДМС:</p>
+        </div>
+        <div class="sec-dms__info-list">
+          {{ dmsInfoItem(
+            [
+              'Анализы.',
+              'Множество заборных лабораторных пунктов в Самаре и регионах'
+            ]
+          ) }}
+          {{ dmsInfoItem(
+            [
+              'На базе круглосуточного стационара проводится высокотехнологичные операции различного уровня сложности по направлениям:',
+              'хирургия, травматология, гинекология, урология, проктология, оториноларингология, челюстно-лицевая и пластическая хирургия и многим другим',
+            ]
+          ) }}
+          {{ dmsInfoItem(
+            [
+              'Врачи-эксперты узкой специализации + вся необходимая аппаратная диагностика по профилю заболевания',
+            ],
+            [
+              'фгс',
+              'узи всех видов',
+              'фиброколоноскопия',
+              'флюорография',
+              'маммография',
+              'рентген',
+              'и др.'
+            ]
+          ) }}
+          {{ dmsInfoItem(
+            ['Помощь на дому'],
+            [
+              'осмотр врача-терапевта',
+              'постановка диагноза',
+              'назначение обследований',
+              'назначение лечения',
+              'назначение повторного приема (на дому, амбулаторно, онлайн).'
+            ]
+          ) }}
+          {{ dmsInfoItem(
+            [
+              'Стоматологическая помощь в объеме предусмотренном вашим страховым полисом'
+            ]
+          ) }}
+          {{ dmsInfoItem(
+            [
+              'Реабилитационно-востановительное лечение в дневном стационаре, а также физиотерапия'
+            ]
+          ) }}
+          {{ dmsInfoItem(
+            [
+              'Если в вашу программу страхования входит Диспансеризация или Check-up (чекап)— программа ранней диагностики заболеваний, включающая в себя полный набор анализов и исследований, который позволит за день ответить на вопрос: всё ли в порядке с вашим здоровьем. По рекомендации Всемирной организации здравоохранения такое медицинское обследование необходимо делать каждый год.'
+            ]
+          ) }}
+          {{ dmsInfoItem(
+            [
+              'Получение и продление больничного листа, оформление справок, оформление санаторно-курортных карт'
+            ]
+          ) }}
+          {{ dmsInfoItem(
+            [
+              'Вакцинация: прием терапевта перед иммунизацией + сезонная профилактика вакцинами импортного производства'
+            ]
+          ) }}
+        </div>
+        <div class="sec-dms__info-footnote">
+          <p>Пожалуйста, уточните в своей страховой компании, какие услуги возможно получить по полису! Страховая компания направляет гарантийное письмо до вашего визита в клинику или лабораторию.</p>
+        </div>
+        <div class="sec-dms__info-options">
+          <h3>Варианты<br />обследований:</h3>
+          <div class="sec-dms__info-options-gender">
+            <div class="sec-dms__info-options-gender-left">
+              <p>Для женщин:</p>
+              <div class="sec-dms__info-options-gender-list">
+                <ul>
+                  <li>2 приема терапевта</li>
+                  <li>прием офтальмолога</li>
+                  <li>прием отоларинголога</li>
+                  <li>прием невролога</li>
+                  <li>2 приема гинеколога</li>
+                  <li>общий анализ крови</li>
+                  <li>общий анализ мочи</li>
+                  <li>ЛПНП</li>
+                  <li>глюкоза</li>
+                  <li>общий белок</li>
+                  <li>АЛТ</li>
+                  <li>АСТ</li>
+                  <li>цитологическое исследование соскоба шейки матки и из цервикального канала (ПАП-тест)</li>
+                </ul>
+                <ul>
+                  <li>рентгенография органов грудной клетки</li>
+                  <li>ЭКГ с расшифровкой</li>
+                  <li>определение остроты зрения</li>
+                  <li>исследование глазного дна</li>
+                  <li>УЗИ органов малого таза</li>
+                  <li>кольпоскопия</li>
+                  <li>маммография или УЗИ молочных желез</li>
+                  <li>онкомаркер СА 125</li>
+                  <li>прием стоматолога-терапевта</li>
+                  <li>анализы на гормоны: ФСГ, ЛГ, тестостерон, эстрадиол, пролактин, прогестерон, ТТГ, т4св, кортизол</li>
+                  <li>липидный спектр (холестерин, ЛПВП, триглицериды)</li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="sec-dms__info-options-gender-right">
+              <p>Для мужчин:</p>
+              <div class="sec-dms__info-options-gender-list">
+                <ul>
+                  <li>2 приема терапевта</li>
+                  <li>прием офтальмолога</li>
+                  <li>прием отоларинголога</li>
+                  <li>прием невролога</li>
+                  <li>прием уролога</li>
+                  <li>общий анализ крови</li>
+                  <li>общий анализ мочи</li>
+                  <li>ЛПНП</li>
+                  <li>глюкоза</li>
+                  <li>общий белок</li>
+                  <li>АЛТ</li>
+                  <li>АСТ</li>
+                </ul>
+                <ul>
+                  <li>микроскопическое исследование секрета предстательной железы</li>
+                  <li>рентгенография органов грудной клетки</li>
+                  <li>ЭКГ с расшифровкой</li>
+                  <li>определение остроты зрения, исследование глазного дна</li>
+                  <li>ТРУЗИ предстательной железы</li>
+                  <li>анализ крови на ПСА (общий)</li>
+                  <li>прием стоматолога-терапевта</li>
+                  <li>липидный спектр (холестерин, ЛПВП, триглицериды)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sec sec-dms-how">
+    <div class="container">
+      <h3>Как воспользоваться<br />услугой по ДМС:</h3>
+      <div class="sec-dms-how__steps">
+        <div class="sec-dms-how__step">Обратиться в свою страховую компанию (по телефону или лично)</div>
+        <div class="sec-dms-how__step">Взять гарантийное письмо в страховой компании или убедиться, что оно получено по электронной почте нашей компанией.</div>
+        <div class="sec-dms-how__step">Записаться на прием к нашему специалисту.</div>
+        <div class="sec-dms-how__step">Для приема также необходим паспорт застрахованного</div>
+      </div>
+    </div>
+  </section>
+  <section class="sec sec-dms-mode">
+    <div class="container">
+      <p>Клиника работает без выходных в полном режиме в выходные и праздничные дни.<br />
+        <br />Колл центр с 7:00 утра ежедневно и до 20-00.</p>
+      <p>
+        <span>8 (846) 2-77-77-03</span>
+        <span>8 (846) 2-77-77-04</span>
+      </p>
+    </div>
+  </section>
+  <section class="sec sec-partners">
+    <div class="container">
+      <h3>Наши партнеры</h3>
+      <div class="sec-partners__list">
+        <div class="sec-partners__item" style="background-image: url('/images/image1.png')"></div>
+        <div class="sec-partners__item" style="background-image: url('/images/image11.png')"></div>
+        <div class="sec-partners__item" style="background-image: url('/images/image12.png')"></div>
+        <div class="sec-partners__item" style="background-image: url('/images/image4.png')"></div>
+        <div class="sec-partners__item" style="background-image: url('/images/image5.png')"></div>
+        <div class="sec-partners__item" style="background-image: url('/images/image6.png')"></div>
+        <div class="sec-partners__item" style="background-image: url('/images/image7.png')"></div>
+        <div class="sec-partners__item" style="background-image: url('/images/image8.png')"></div>
+        <div class="sec-partners__item" style="background-image: url('/images/image9.png')"></div>
+        <div class="sec-partners__item" style="background-image: url('/images/image10.png')"></div>
+        <div class="sec-partners__item" style="background-image: url('/images/image2.png')"></div>
+        <div class="sec-partners__item" style="background-image: url('/images/image3.png')"></div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
