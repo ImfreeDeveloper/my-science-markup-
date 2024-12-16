@@ -9,6 +9,7 @@ const headerMainMnu = document.querySelector('.header__main-mnu')
 const headerSubMnu = document.querySelector('.header__sub-mnu')
 const asideMobileBody = document.querySelector('.aside-mobile__body')
 const subMenu = document.querySelector('.sub-mnu')
+const articlesList = document.querySelector('.sec-patients__articles-list')
 
 function hideAside() {
   bodyAside.classList.remove('show')
@@ -75,6 +76,22 @@ if (subMenu) {
         subMenuItem.classList.remove('open')
       } else {
         subMenuItem.classList.add('open')
+      }
+    }
+    // if (!event.target.matches('.click-me')) return;
+  })
+}
+
+if (articlesList) {
+  articlesList.addEventListener('click', (event) => {
+    const el = event.target
+
+    if (el.classList.contains('sec-patients__articles-item-title')) {
+      const item = el.parentNode
+      if (item.classList.contains('open')) {
+        item.classList.remove('open')
+      } else {
+        item.classList.add('open')
       }
     }
     // if (!event.target.matches('.click-me')) return;

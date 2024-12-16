@@ -378,24 +378,43 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 5rem;
+      @include md-block() {
+        grid-gap: 3rem;
+      }
       @include sm-block() {
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 3rem;
       }
       @include xs-block() {
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 3rem;
+        grid-gap: 1rem;
       }
     }
     &-item {
+      position: relative;
+      &.open {
+        @include xs-block() {
+          .sec-patients__articles-item-arrow {
+            transform: rotate(0deg);
+          }
+          ul {
+            display: block!important;
+            margin-bottom: 2rem;
+          }
+        }
+
+      }
       > p {
         font-size: 1.2rem;
         font-weight: $medium;
         text-transform: uppercase;
         display: block;
         margin-bottom: 1.5rem;
+        position: relative;
       }
       ul {
+        @include xs-block() {
+          display: none;
+        }
         li {
           position: relative;
           padding-left: 2rem;
@@ -423,6 +442,22 @@
               text-decoration: none;
             }
           }
+        }
+      }
+      &-arrow {
+        @include xs-block() {
+          position: absolute;
+          top: .5rem;
+          right: 0;
+          width: 1.5rem;
+          height: .7rem;
+          background-image: url('/images/svg/icon-arrow.svg');
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          transform: rotate(-180deg);
+          transition: .3s ease-in-out all;
+          z-index: -1;
         }
       }
     }

@@ -250,7 +250,10 @@
 {% macro patientsArticleList(title, listLi) %}
 	<div class="sec-patients__articles-item">
 		{% if title %}
-			<p>{{ title }}</p>
+			<p class="sec-patients__articles-item-title">
+				{{ title }}
+				<span class="sec-patients__articles-item-arrow"></span>
+			</p>
 		{% endif %}
 		{% if listLi|length > 0 %}
 			<ul>
