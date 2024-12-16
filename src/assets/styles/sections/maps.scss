@@ -1,0 +1,57 @@
+.sec-maps {
+  &__tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    grid-gap: 4rem;
+    &-item {
+      background-color: $color-grey1;
+      border-radius: 3.5rem;
+      padding: 1.9rem 1.4rem;
+      &-name {
+        font-size: 1.4rem;
+        text-align: center;
+        font-weight: $bold;
+      }
+      &-services {
+        display: flex;
+        padding: 2rem 0;
+        justify-content: center;
+        p {
+          padding: 1rem 1.9rem;
+          background-color: $color-primary;
+          font-size: 1.2rem;
+          font-weight: $semiBold;
+          line-height: 1;
+          color: $color-white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: .5rem;
+          text-align: center;
+          border-radius: 3rem;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      &-mode {
+        ul {
+          display: flex;
+          justify-content: space-between;
+          li {
+            font-size: 1.2rem;
+            color: $color-grey5;
+            margin-bottom: 1.3rem;
+            &:first-child {
+              font-weight: $normal;
+            }
+            &:last-child {
+              font-weight: $bold;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -267,6 +267,31 @@
 	</div>
 {% endmacro %}
 
+{% macro mapsTileItem(name, listServices) %}
+	<div class="sec-maps__tiles-item">
+		<p class="sec-maps__tiles-item-name">{{ name }}</p>
+		<div class="sec-maps__tiles-item-services">
+			{% for itemService in listServices %}
+				<p>{{ itemService }}</p>
+			{% endfor %}
+		</div>
+		<div class="sec-maps__tiles-item-mode">
+			<ul>
+				<li>Телефон</li>
+				<li>+7 846 277 77 03</li>
+			</ul>
+			<ul>
+				<li>Время работы</li>
+				<li>
+					ПН-ПТ 7.00-20.00<br />
+					СБ 7.00-18.00<br />
+					ВС 7.00-16.00
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endmacro %}
+
 {#{% macro form_input(name, value='', title=name, type='text') %}#}
 {#<div class="form-group">#}
 {#	<label class="form-label" for="{{ name }}_id">{{ title }}</label>#}
