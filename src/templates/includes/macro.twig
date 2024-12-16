@@ -247,6 +247,23 @@
 	</div>
 {% endmacro %}
 
+{% macro patientsArticleList(title, listLi) %}
+	<div class="sec-patients__articles-item">
+		{% if title %}
+			<p>{{ title }}</p>
+		{% endif %}
+		{% if listLi|length > 0 %}
+			<ul>
+				{% for itemLi in listLi %}
+					<li>
+						<a href="#">{{ itemLi }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</div>
+{% endmacro %}
+
 {#{% macro form_input(name, value='', title=name, type='text') %}#}
 {#<div class="form-group">#}
 {#	<label class="form-label" for="{{ name }}_id">{{ title }}</label>#}

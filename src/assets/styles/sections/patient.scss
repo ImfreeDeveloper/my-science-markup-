@@ -341,3 +341,90 @@
     }
   }
 }
+
+.sec-patients {
+  .sec-patient {
+    &__services {
+      margin-bottom: 10rem;
+      @include sm-block() {
+        margin-bottom: 8rem;
+      }
+      &-item {
+        background-color: $color-grey;
+        &_all {
+          background-color: $color-green;
+        }
+      }
+    }
+  }
+  &__articles {
+    h3 {
+      display: block;
+      text-align: center;
+      line-height: 1.3;
+      color: $color-black;
+      font-size: 3rem;
+      font-weight: $semiBold;
+      font-family: $secondFont;
+      margin-bottom: 6rem;
+      @include sm-block() {
+        margin-bottom: 3.8rem;
+      }
+      @include xs-block() {
+        text-align: left;
+      }
+    }
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 5rem;
+      @include sm-block() {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3rem;
+      }
+      @include xs-block() {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 3rem;
+      }
+    }
+    &-item {
+      > p {
+        font-size: 1.2rem;
+        font-weight: $medium;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 1.5rem;
+      }
+      ul {
+        li {
+          position: relative;
+          padding-left: 2rem;
+          line-height: 1;
+
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 1rem;
+            top: .9rem;
+            margin: auto;
+            background-color: $color-black;
+            width: .3rem;
+            height: .3rem;
+            border-radius: 50%;
+          }
+
+          a {
+            text-decoration: underline;
+            font-size: 1.2rem;
+            font-weight: $medium;
+            line-height: 1;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
