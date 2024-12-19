@@ -292,6 +292,17 @@
 	</div>
 {% endmacro %}
 
+{% macro calendarDay(status = "", dayNumber = "", time = "") %}
+	<div class="bl-appointment-calendar__day{% if status == "disabled" %} disabled{% endif %}{% if status == "enabled" %} enabled{% endif %}">
+		{% if dayNumber %}
+			<p class="bl-appointment-calendar__day-number">{{ dayNumber }}</p>
+		{% endif %}
+		{% if time %}
+			<p class="bl-appointment-calendar__time">{{ time }}</p>
+		{% endif %}
+	</div>
+{% endmacro %}
+
 {#{% macro form_input(name, value='', title=name, type='text') %}#}
 {#<div class="form-group">#}
 {#	<label class="form-label" for="{{ name }}_id">{{ title }}</label>#}

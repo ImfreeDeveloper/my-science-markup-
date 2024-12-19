@@ -1,0 +1,118 @@
+.bl-appointment {
+  &__select {
+    margin-bottom: 2.2rem;
+  }
+  &__wrapper {
+    display: flex;
+  }
+  &-calendar {
+    flex-shrink: 0;
+    border-radius: 3rem;
+    border: .3rem solid $color-grey7;
+    padding: 1.9rem 5.4rem;
+    margin-right: 5rem;
+    max-width: 87.5rem;
+    width: 100%;
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.7rem;
+    }
+    &__title {
+      font-weight: $semiBold;
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+    &__days-week {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-gap: .8rem;
+      margin-bottom: 1.5rem;
+      > p {
+        border-radius: 1rem;
+        border: .1rem solid $color-grey8;
+        font-weight: $semiBold;
+        color: #000000;
+        line-height: .9;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &__months {
+      display: flex;
+      button {
+        flex-shrink: 0;
+        position: relative;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        display: flex;
+        color: $color-grey7;
+        background-color: $color-grey8;
+        line-height: 1;
+        padding: .5rem 2rem;
+        border-radius: 1rem;
+        margin-left: .8rem;
+        cursor: pointer;
+        transition: .3s ease-in-out all;
+        @include xs-block() {
+          cursor: default;
+        }
+        &:hover {
+          color: #000000;
+          background-color: $color-grey7;
+        }
+        &.active {
+          background-color: $color-primary;
+          color: #000000;
+        }
+      }
+    }
+    &__days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-gap: .8rem;
+    }
+    &__day {
+      height: 5rem;
+      border-radius: 1rem;
+      border: .1rem solid $color-grey8;
+      padding: .8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-weight: $medium;
+      transition: .3s ease-in-out all;
+      &-number {
+        line-height: .9;
+      }
+      &.disabled {
+        background-color: $color-grey8;
+        color: $color-grey7;
+      }
+      &.enabled {
+        border: .1rem solid $color-primary;
+        color: #000000;
+        cursor: pointer;
+        @include xs-block() {
+          cursor: default;
+        }
+        &:hover {
+          background-color: $color-primary;
+        }
+      }
+    }
+    &__time {
+      font-size: 1rem;
+      line-height: .8;
+    }
+  }
+  &-time {
+    flex: 1;
+    border-radius: 3rem;
+    border: .3rem solid $color-grey7;
+  }
+}

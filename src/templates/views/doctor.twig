@@ -1,5 +1,5 @@
 {% extends "layouts::main.twig" %}
-{% from "@includes/macro.twig" import svg %}
+{% from "@includes/macro.twig" import svg, calendarDay %}
 
 {% block content %}
   <section class="sec sec-doctor">
@@ -115,33 +115,117 @@
       </div>
     </div>
   </section>
-  <section class="sec sec-doctor-form">
+  <section class="sec sec-doctor-appointment">
     <div class="container">
-      <div class="form-doctor-call">
-        <div class="form-doctor-call__content">
-          <h3 class="form-doctor-call__title">запись на приём</h3>
-          <form action="/" class="form-doctor-call__form">
-            <div class="form-doctor-call__form-left">
-              <input type="text" placeholder="специалист" name="spec" />
-              <input type="text" placeholder="адрес клиники" name="address" />
-              <input type="text" placeholder="дата приема" name="date" />
-              <input type="text" placeholder="время приема" name="time" />
-              <input type="text" placeholder="проверочный код" name="code" />
-            </div>
-            <div class="form-doctor-call__form-right">
-              <input type="text" placeholder="ваше полное фио" name="fio" />
-              <input type="text" placeholder="ваш номер телефона" name="phone" />
-              <textarea type="text" placeholder="примечание к записи" name="note"></textarea>
-              <div class="form-doctor-call__btns">
-                <button type="submit" class="btn btn-black">записаться</button>
+      <div class="sec__title">
+        <h3>Запись на приём</h3>
+      </div>
+      <div class="bl-appointment">
+        <div class="bl-appointment__select">
+          <a href="#" class="btn-menu-select">
+            <i>выбрать медицинский центр</i>
+            <span>
+                {{ svg('id-arrow-right', 'svg-arrow-right') }}
+              </span>
+          </a>
+        </div>
+        <div class="bl-appointment__wrapper">
+          <div class="bl-appointment-calendar">
+            <div class="bl-appointment-calendar__top">
+              <p class="bl-appointment-calendar__title">выберите день приёма</p>
+              <div class="bl-appointment-calendar__months">
+                <button class="active">декабрь</button>
+                <button>январь</button>
               </div>
             </div>
-          </form>
+            <div class="bl-appointment-calendar__days-week">
+              <p>ПН</p>
+              <p>ВТ</p>
+              <p>СР</p>
+              <p>ЧТ</p>
+              <p>ПТ</p>
+              <p>СБ</p>
+              <p>ВС</p>
+            </div>
+            <div class="bl-appointment-calendar__days">
+              {{ calendarDay() }}
+              {{ calendarDay() }}
+              {{ calendarDay() }}
+              {{ calendarDay() }}
+              {{ calendarDay() }}
+              {{ calendarDay() }}
+              {{ calendarDay('disabled', '1') }}
+              {{ calendarDay('disabled', '2') }}
+              {{ calendarDay('disabled', '3') }}
+              {{ calendarDay('disabled', '4') }}
+              {{ calendarDay('disabled', '5') }}
+              {{ calendarDay('disabled', '6') }}
+              {{ calendarDay('disabled', '7') }}
+              {{ calendarDay('disabled', '8') }}
+              {{ calendarDay('disabled', '9') }}
+              {{ calendarDay('disabled', '10') }}
+              {{ calendarDay('enabled', '11', 'с 11:30 до 13:00') }}
+              {{ calendarDay('enabled', '12', 'с 11:30 до 13:00') }}
+              {{ calendarDay('enabled', '13', 'с 8:30 до 13:00') }}
+              {{ calendarDay('disabled', '14') }}
+              {{ calendarDay('disabled', '15') }}
+              {{ calendarDay('disabled', '16') }}
+              {{ calendarDay('enabled', '17', 'с 8:30 до 13:00') }}
+              {{ calendarDay('disabled', '18') }}
+              {{ calendarDay('enabled', '19', 'с 11:30 до 13:00') }}
+              {{ calendarDay('disabled', '20') }}
+              {{ calendarDay('enabled', '21', 'с 8:30 до 13:00') }}
+              {{ calendarDay('disabled', '22') }}
+              {{ calendarDay('disabled', '23') }}
+              {{ calendarDay('disabled', '24') }}
+              {{ calendarDay('enabled', '25', 'с 11:30 до 13:00') }}
+              {{ calendarDay('enabled', '26', 'с 11:30 до 13:00') }}
+              {{ calendarDay('enabled', '27', 'с 8:30 до 13:00') }}
+              {{ calendarDay('enabled', '28', 'с 8:30 до 13:00') }}
+              {{ calendarDay('disabled', '29') }}
+              {{ calendarDay('enabled', '30', 'с 8:30 до 13:00') }}
+              {{ calendarDay('disabled', '31') }}
+              {{ calendarDay() }}
+              {{ calendarDay() }}
+              {{ calendarDay() }}
+              {{ calendarDay() }}
+              {{ calendarDay() }}
+            </div>
+          </div>
+          <div class="bl-appointment-time"></div>
         </div>
-        <div class="form-doctor-call__img">
-          <div class="form-doctor-call__img-circle"></div>
-        </div>
+
       </div>
     </div>
   </section>
+
+{#  <section class="sec sec-doctor-form">#}
+{#    <div class="container">#}
+{#      <div class="form-doctor-call">#}
+{#        <div class="form-doctor-call__content">#}
+{#          <h3 class="form-doctor-call__title">запись на приём</h3>#}
+{#          <form action="/" class="form-doctor-call__form">#}
+{#            <div class="form-doctor-call__form-left">#}
+{#              <input type="text" placeholder="специалист" name="spec" />#}
+{#              <input type="text" placeholder="адрес клиники" name="address" />#}
+{#              <input type="text" placeholder="дата приема" name="date" />#}
+{#              <input type="text" placeholder="время приема" name="time" />#}
+{#              <input type="text" placeholder="проверочный код" name="code" />#}
+{#            </div>#}
+{#            <div class="form-doctor-call__form-right">#}
+{#              <input type="text" placeholder="ваше полное фио" name="fio" />#}
+{#              <input type="text" placeholder="ваш номер телефона" name="phone" />#}
+{#              <textarea type="text" placeholder="примечание к записи" name="note"></textarea>#}
+{#              <div class="form-doctor-call__btns">#}
+{#                <button type="submit" class="btn btn-black">записаться</button>#}
+{#              </div>#}
+{#            </div>#}
+{#          </form>#}
+{#        </div>#}
+{#        <div class="form-doctor-call__img">#}
+{#          <div class="form-doctor-call__img-circle"></div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </section>#}
 {% endblock %}
