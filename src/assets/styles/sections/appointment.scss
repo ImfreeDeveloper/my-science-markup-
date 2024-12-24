@@ -4,15 +4,25 @@
   }
   &__wrapper {
     display: flex;
+    @include md-block() {
+      flex-direction: column;
+    }
   }
   &-calendar {
-    flex-shrink: 0;
     border-radius: 3rem;
     border: .3rem solid $color-grey7;
     padding: 1.9rem 5.4rem;
     margin-right: 5rem;
-    max-width: 87.5rem;
-    width: 100%;
+    flex: 3;
+    @include md-block() {
+      flex: 1;
+      margin-right: 0;
+      margin-bottom: 4.4rem;
+    }
+    @include xs-block() {
+      padding: 1.9rem 1.4rem;
+      margin-bottom: 2.5rem;
+    }
     &__top {
       display: flex;
       justify-content: space-between;
@@ -23,12 +33,22 @@
       font-weight: $semiBold;
       font-size: 1.8rem;
       line-height: 1;
+      i {
+        font-style: normal;
+        color: $color-green;
+      }
+      @include xs-block() {
+        font-size: 1.4rem;
+      }
     }
     &__days-week {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       grid-gap: .8rem;
       margin-bottom: 1.5rem;
+      @include xs-block() {
+        grid-gap: .2rem;
+      }
       > p {
         border-radius: 1rem;
         border: .1rem solid $color-grey8;
@@ -39,6 +59,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include xs-block() {
+          font-size: 1.2rem;
+        }
       }
     }
     &__months {
@@ -60,6 +83,9 @@
         transition: .3s ease-in-out all;
         @include xs-block() {
           cursor: default;
+          font-size: 1.2rem;
+          padding: 0.5rem;
+          margin-left: .4rem;
         }
         &:hover {
           color: #000000;
@@ -75,6 +101,9 @@
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       grid-gap: .8rem;
+      @include xs-block() {
+        grid-gap: .2rem;
+      }
     }
     &__day {
       height: 5rem;
@@ -86,8 +115,30 @@
       justify-content: space-between;
       font-weight: $medium;
       transition: .3s ease-in-out all;
+      br {
+        display: none;
+      }
+      @include to(1200px) {
+        height: 6rem;
+        br {
+          display: block;
+        }
+      }
+      @include to(650px) {
+        height: 4rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      @include xs-block() {
+        padding: .4rem;
+      }
+
       &-number {
         line-height: .9;
+        @include xs-block() {
+          font-size: 1.3rem;
+        }
       }
       &.disabled {
         background-color: $color-grey8;
@@ -107,12 +158,53 @@
     }
     &__time {
       font-size: 1rem;
-      line-height: .8;
+      line-height: 1.1;
+      @include to(650px) {
+        display: none;
+      }
     }
   }
   &-time {
     flex: 1;
     border-radius: 3rem;
     border: .3rem solid $color-grey7;
+    padding: 2.9rem 2.6rem;
+    display: flex;
+    flex-direction: column;
+    @include xs-block() {
+      padding: 1.9rem 1.4rem;
+    }
+    .bl-appointment-calendar__title {
+      margin-bottom: 2.5rem;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: .8rem;
+      @include md-block() {
+        grid-template-columns: repeat(auto-fit, minmax(8.2rem, 1fr));
+      }
+      @include xs-block() {
+        grid-template-columns: repeat(auto-fit, minmax(5.2rem, 1fr));
+      }
+      .bl-appointment-calendar__day {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        &-number {
+          font-weight: $medium;
+        }
+      }
+    }
+    &__btn {
+      margin-top: auto;
+      .btn {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        @include md-block() {
+          margin-top: 3.5rem;
+        }
+      }
+    }
   }
 }

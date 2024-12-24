@@ -164,26 +164,26 @@
               {{ calendarDay('disabled', '8') }}
               {{ calendarDay('disabled', '9') }}
               {{ calendarDay('disabled', '10') }}
-              {{ calendarDay('enabled', '11', 'с 11:30 до 13:00') }}
-              {{ calendarDay('enabled', '12', 'с 11:30 до 13:00') }}
-              {{ calendarDay('enabled', '13', 'с 8:30 до 13:00') }}
+              {{ calendarDay('enabled', '11', 'с 11:30<br /> до 13:00') }}
+              {{ calendarDay('enabled', '12', 'с 11:30<br /> до 13:00') }}
+              {{ calendarDay('enabled', '13', 'с 8:30<br /> до 13:00') }}
               {{ calendarDay('disabled', '14') }}
               {{ calendarDay('disabled', '15') }}
               {{ calendarDay('disabled', '16') }}
-              {{ calendarDay('enabled', '17', 'с 8:30 до 13:00') }}
+              {{ calendarDay('enabled', '17', 'с 8:30<br /> до 13:00') }}
               {{ calendarDay('disabled', '18') }}
-              {{ calendarDay('enabled', '19', 'с 11:30 до 13:00') }}
+              {{ calendarDay('enabled', '19', 'с 11:30<br /> до 13:00') }}
               {{ calendarDay('disabled', '20') }}
-              {{ calendarDay('enabled', '21', 'с 8:30 до 13:00') }}
+              {{ calendarDay('enabled', '21', 'с 8:30<br /> до 13:00') }}
               {{ calendarDay('disabled', '22') }}
               {{ calendarDay('disabled', '23') }}
               {{ calendarDay('disabled', '24') }}
-              {{ calendarDay('enabled', '25', 'с 11:30 до 13:00') }}
-              {{ calendarDay('enabled', '26', 'с 11:30 до 13:00') }}
-              {{ calendarDay('enabled', '27', 'с 8:30 до 13:00') }}
-              {{ calendarDay('enabled', '28', 'с 8:30 до 13:00') }}
+              {{ calendarDay('enabled', '25', 'с 11:30<br /> до 13:00') }}
+              {{ calendarDay('enabled', '26', 'с 11:30<br /> до 13:00') }}
+              {{ calendarDay('enabled', '27', 'с 8:30<br /> до 13:00') }}
+              {{ calendarDay('enabled', '28', 'с 8:30<br /> до 13:00') }}
               {{ calendarDay('disabled', '29') }}
-              {{ calendarDay('enabled', '30', 'с 8:30 до 13:00') }}
+              {{ calendarDay('enabled', '30', 'с 8:30<br /> до 13:00') }}
               {{ calendarDay('disabled', '31') }}
               {{ calendarDay() }}
               {{ calendarDay() }}
@@ -192,7 +192,26 @@
               {{ calendarDay() }}
             </div>
           </div>
-          <div class="bl-appointment-time"></div>
+          <div class="bl-appointment-time">
+            <p class="bl-appointment-calendar__title">время приёма <i>19 декабря</i></p>
+            <div class="bl-appointment-time__list">
+              {{ calendarDay('enabled', '10:00') }}
+              {{ calendarDay('disabled', '10:30') }}
+              {{ calendarDay('enabled', '11:00') }}
+              {{ calendarDay('enabled', '11:30') }}
+              {{ calendarDay('disabled', '12:00') }}
+              {{ calendarDay('disabled', '12:30') }}
+              {{ calendarDay('enabled', '13:00') }}
+              {{ calendarDay('disabled', '13:30') }}
+              {{ calendarDay('enabled', '14:00') }}
+              {{ calendarDay('enabled', '14:30') }}
+              {{ calendarDay('disabled', '15:00') }}
+              {{ calendarDay('disabled', '15:30') }}
+            </div>
+            <div class="bl-appointment-time__btn">
+              <button class="btn btn-black">записаться</button>
+            </div>
+          </div>
         </div>
 
       </div>
